@@ -128,7 +128,8 @@
 
 Click this button to add all of the generated words to your
 computer's clipboard. In other words, it's an automatic Ctrl+C!
-You'll then have to paste it somewhere else, such as in an </value>
+You'll then have to paste it somewhere else, like a document or
+other note-taking or text-based program.</value>
   </data>
   <metadata name="toolTipRandomize.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>826, 20</value>
@@ -149,24 +150,6 @@ of 3 syllable word fragments sampled from the entire unfiltered list,
 and only 1 name generated at a time.
 </value>
   </data>
-  <data name="buttonRandom.ToolTip1" xml:space="preserve">
-    <value>Hotkey: Spacebar, Enter
-
-Use this button to generate a new batch of random names,
-taking into account all parameters set in the above controls,
-and replacing any words that have already been generated. 
-In other words, if there are any words in the chart that you 
-like but haven' yet saved, be sure to do so before you hit
-the Randomize! button again.
-
-NOTE: You can still Randomize! without inputting any parameters
-in any of the other controls. It defaults to no prefix or suffix, a length
-of 3 syllable word fragments sampled from the entire unfiltered list,
-and only 1 name generated at a time.
-
-
-</value>
-  </data>
   <metadata name="tableLayoutPanelLeftTop.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -181,6 +164,75 @@ Checking this option is actually the same as leaving both text fields blank.
 All it does is ensure that the generated words will not consider any suffixes,
 whether filtered syllables or explicitly defined ones, when it constructs words.
 In other words, they will end with completely random syllables.
+
+</value>
+  </data>
+  <data name="panelLastLetters.ToolTip" xml:space="preserve">
+    <value>
+Static Name Suffix:
+
+Use this form to add exact letters to the end of the words you generate.
+These letters will not change or disappear unless you delete them from the box.
+
+Last Letter(s) Generated:
+
+Use this form to filter the list of syllable word fragments used by the generator
+to create the ending of the word. For example, entering the letter "a" will
+ensure the last portion of the word (before the suffix) begins with any syllable
+(from the list) that starts with "a," such as "an," "ath," "ar," or even just "a".
+
+</value>
+  </data>
+  <data name="panelFirstLetters.ToolTip" xml:space="preserve">
+    <value>
+Static Name Prefix:
+
+Use this form to add exact letters to the start of the words you generate.
+These letters will not change or disappear unless you delete them from the box.
+
+First Letter(s) Generated:
+
+Use this form to filter the list of syllable word fragments used by
+the generator. For example, entering the letter "a" will ensure the generated 
+portion of the word begins with any syllable (from the list) that starts with "a," 
+such as "An," "Ath," "Ar," or even just "A".
+</value>
+  </data>
+  <data name="panelNameLength.ToolTip" xml:space="preserve">
+    <value>Hotkey: Left Arrow, Right arrow
+
+Name Length:
+
+The Random Name Generator constructs words by sampling from a massive 
+list of pre-defined syllables (wordlist.txt). The word length is thus the number
+of times the generator randomly samples from that list to add more syllables.
+It then combines these word fragments with any defined prefixes or suffixes
+to produce names. 
+
+In other words, Name Length is the number of non-prefix and non-suffix 
+syllable word fragments used when generating names.
+
+</value>
+  </data>
+  <data name="checkRandomLength.ToolTip" xml:space="preserve">
+    <value>
+Random Length:
+
+Checking this box will make each name generated use a random
+number (between 1 and 5) of syllable word fragments pulled from
+the list file. Use this option to get a lot more variety in the kinds of
+names you generate. 
+</value>
+  </data>
+  <data name="checkRandomFirstLetters.ToolTip" xml:space="preserve">
+    <value>
+Random First Letter(s):
+
+Checking this option is actually the same as leaving both text fields blank.
+All it does is ensure that the generated words will not consider any prefixes,
+whether filtered syllables or explicitly defined ones, when it constructs words.
+In other words, they will begin with completely random syllables.
+
 
 </value>
   </data>
@@ -209,22 +261,6 @@ ensure the last portion of the word (before the suffix) begins with any syllable
 </value>
   </data>
   <data name="labelSuffixDescription.ToolTip" xml:space="preserve">
-    <value>
-Static Name Suffix:
-
-Use this form to add exact letters to the end of the words you generate.
-These letters will not change or disappear unless you delete them from the box.
-
-Last Letter(s) Generated:
-
-Use this form to filter the list of syllable word fragments used by the generator
-to create the ending of the word. For example, entering the letter "a" will
-ensure the last portion of the word (before the suffix) begins with any syllable
-(from the list) that starts with "a," such as "an," "ath," "ar," or even just "a".
-
-</value>
-  </data>
-  <data name="panelLastLetters.ToolTip" xml:space="preserve">
     <value>
 Static Name Suffix:
 
@@ -277,21 +313,6 @@ such as "An," "Ath," "Ar," or even just "A".
 
 </value>
   </data>
-  <data name="panelFirstLetters.ToolTip" xml:space="preserve">
-    <value>
-Static Name Prefix:
-
-Use this form to add exact letters to the start of the words you generate.
-These letters will not change or disappear unless you delete them from the box.
-
-First Letter(s) Generated:
-
-Use this form to filter the list of syllable word fragments used by
-the generator. For example, entering the letter "a" will ensure the generated 
-portion of the word begins with any syllable (from the list) that starts with "a," 
-such as "An," "Ath," "Ar," or even just "A".
-</value>
-  </data>
   <metadata name="toolTipLength.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>465, 18</value>
   </metadata>
@@ -342,44 +363,21 @@ In other words, Name Length is the number of non-prefix and non-suffix
 syllable word fragments used when generating names.
 </value>
   </data>
-  <data name="panelNameLength.ToolTip" xml:space="preserve">
-    <value>Hotkey: Left Arrow, Right arrow
-
-Name Length:
-
-The Random Name Generator constructs words by sampling from a massive 
-list of pre-defined syllables (wordlist.txt). The word length is thus the number
-of times the generator randomly samples from that list to add more syllables.
-It then combines these word fragments with any defined prefixes or suffixes
-to produce names. 
-
-In other words, Name Length is the number of non-prefix and non-suffix 
-syllable word fragments used when generating names.
-
-</value>
-  </data>
-  <data name="checkRandomLength.ToolTip" xml:space="preserve">
-    <value>
-Random Length:
-
-Checking this box will make each name generated use a random
-number (between 1 and 5) of syllable word fragments pulled from
-the list file. Use this option to get a lot more variety in the kinds of
-names you generate. 
-</value>
-  </data>
-  <data name="checkRandomFirstLetters.ToolTip" xml:space="preserve">
-    <value>
-Random First Letter(s):
-
-Checking this option is actually the same as leaving both text fields blank.
-All it does is ensure that the generated words will not consider any prefixes,
-whether filtered syllables or explicitly defined ones, when it constructs words.
-In other words, they will begin with completely random syllables.
-
-
-</value>
-  </data>
+  <metadata name="toolTipFirstLetters.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>176, 17</value>
+  </metadata>
+  <metadata name="toolTipLastLetters.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>314, 21</value>
+  </metadata>
+  <metadata name="toolTipLength.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>465, 18</value>
+  </metadata>
+  <metadata name="toolTipQuantity.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>689, 20</value>
+  </metadata>
+  <metadata name="toolTipRandomize.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>826, 20</value>
+  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

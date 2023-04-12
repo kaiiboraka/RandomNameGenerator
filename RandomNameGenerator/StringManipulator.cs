@@ -12,7 +12,7 @@ public static class StringManipulator
         var resultWord = wordFragments.Aggregate("", (current, wordFragment) => current + wordFragment);
         if (string.IsNullOrEmpty(resultWord))
         {
-            resultWord = "NULL";
+            resultWord = "ERR_NULL";
         }
 
         return resultWord;
@@ -23,8 +23,8 @@ public static class StringManipulator
         switch (word)
         {
             case null:
-                return "NULL";
-            case "NULL":
+                return "ERR_NULL";
+            case "ERR_NULL":
                 return word;
             default:
 
@@ -36,14 +36,14 @@ public static class StringManipulator
     public static string AddPrefix(string prefix, string word)
     {
         if (string.IsNullOrEmpty(prefix)) return word;
-        if (word.Contains("null", StringComparison.OrdinalIgnoreCase)) return "NULL";
+        if (word.Contains("ERR_NULL", StringComparison.OrdinalIgnoreCase)) return "ERR_NULL";
         return prefix + word;
     }
 
     public static string AddSuffix(string word, string suffix)
     {
         if (string.IsNullOrEmpty(suffix)) return word;
-        if (word.Contains("null", StringComparison.OrdinalIgnoreCase)) return "NULL";
+        if (word.Contains("ERR_NULL", StringComparison.OrdinalIgnoreCase)) return "ERR_NULL";
         return word + suffix;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.IO;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace RandomNameGenerator
         private string lastLetters;
         private int nameLength;
         private int nameQuantity;
+        public const int MAX_NAMES = 100;
         private const string BUTTON_TEXT_COPY = "&Copy Results";
         private const string BUTTON_TEXT_SORT = "S&ort Results";
         private const string BUTTON_TEXT_UNSORT = "&Unsort Results";
@@ -32,7 +34,9 @@ namespace RandomNameGenerator
             InitializeComponent();
             dataGridNames.Rows.Clear();
             dataGridNames.Refresh();
+
         }
+
 
         private void RandomGenerator_Load(object sender, EventArgs e)
         {
@@ -43,12 +47,12 @@ namespace RandomNameGenerator
             trackBarNameLength.Value = 3;
             labelTrackBarSize.Text = trackBarNameLength.Value.ToString();
             isSorted = false;
-            
+
             buttonSort.Text = BUTTON_TEXT_SORT;
             buttonCopy.Text = BUTTON_TEXT_COPY;
-            
+
             ToggleFileButtons(OFF);
-            
+
             dataGridNames.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
 
 
@@ -59,7 +63,7 @@ namespace RandomNameGenerator
             progressBarGenerating.Minimum = 0;
 
             // Set Maximum to the total number of files to copy.
-            progressBarGenerating.Maximum = 100;
+            progressBarGenerating.Maximum = MAX_NAMES;
 
             // Set the initial value of the ProgressBar.
             progressBarGenerating.Value = 0;
@@ -86,10 +90,10 @@ namespace RandomNameGenerator
             isSorted = false;
 
 
-            buttonRandom.Text = "Generating...";
+            buttonRandom.Text = "Generating";
 
-            
-            ToggleAllFields(OFF);
+
+            ToggleAllControls(OFF);
 
             buttonSort.Text = BUTTON_TEXT_SORT;
             firstLetters = textPrefixFilter.Text.ToLower();
@@ -122,12 +126,12 @@ namespace RandomNameGenerator
 
                 if (checkRandomLastLetters.Checked)
                 {
-                    suffix = null;  
+                    suffix = null;
                     lastLetters = null;
                 }
 
-                nameLength = checkRandomLength.Checked ? 
-                    NameRandomizer.RandomValue(trackBarNameLength.Minimum, trackBarNameLength.Maximum) 
+                nameLength = checkRandomLength.Checked
+                    ? NameRandomizer.RandomValue(trackBarNameLength.Minimum, trackBarNameLength.Maximum)
                     : trackBarNameLength.Value;
 
                 string resultWord = NameRandomizer.Randomize(ref prefix, ref suffix, ref firstLetters, ref lastLetters,
@@ -140,8 +144,32 @@ namespace RandomNameGenerator
                 PickAndFillCell(i, resultWord);
 
                 progressBarGenerating.PerformStep();
-
-                if (resultWord.Contains("NULL") || resultWord.Contains("null"))
+                
+                if (i / (float)nameQuantity > .75f)
+                {
+                    if (buttonRandom.Text != "Generating...")
+                    {
+                        buttonRandom.Text = "Generating...";
+                        buttonRandom.Update();
+                    }
+                }
+                else if (i / (float)nameQuantity > .5f)
+                {
+                    if (buttonRandom.Text != "Generating..")
+                    {
+                        buttonRandom.Text = "Generating..";
+                        buttonRandom.Update();
+                    }
+                }
+                else if (i / (float)nameQuantity > .25f)
+                {
+                    if (buttonRandom.Text != "Generating.")
+                    {
+                        buttonRandom.Text = "Generating.";
+                        buttonRandom.Update();
+                    }
+                }
+                if (resultWord.Contains("ERR_NULL", StringComparison.OrdinalIgnoreCase))
                 {
                     MessageBox.Show("No matching word was found. Try a different word.", "Error: word not found.",
                         MessageBoxButtons.OK);
@@ -154,19 +182,22 @@ namespace RandomNameGenerator
             sortedList = generatedList.ToList();
             generatedList = holdingList.ToList();
 
-            ToggleAllFields(ON);
-            checkRandomFirstLetters_CheckedChanged(this,null);
-            checkRandomLastLetters_CheckedChanged(this,null);
-            checkRandomLength_CheckedChanged(this,null);
+            ToggleAllControls(ON);
+            checkRandomFirstLetters_CheckedChanged(this, null);
+            checkRandomLastLetters_CheckedChanged(this, null);
+            checkRandomLength_CheckedChanged(this, null);
 
             buttonRandom.Text = BUTTON_TEXT_RANDOM;
 
             progressBarGenerating.Value = 0;
 
             //progressBarGenerating.Visible = false;
+
+            LockSortButton();
+            TrySort();
         }
 
-        private void ToggleAllFields(bool toggle)
+        private void ToggleAllControls(bool toggle)
         {
             TogglePrefixFields(toggle);
             ToggleSuffixFields(toggle);
@@ -183,9 +214,10 @@ namespace RandomNameGenerator
 
         private void ToggleFileButtons(bool toggle)
         {
-            buttonSort.Enabled = toggle && dataGridNames.Rows.Count > 1;
+            buttonSort.Enabled = toggle && dataGridNames.Rows.Count > 1 && !alwaysSortCheckBox.Checked;
             buttonCopy.Enabled = toggle;
             buttonSave.Enabled = toggle;
+            alwaysSortCheckBox.Enabled = toggle;
         }
 
         private void CreateDataGridViewColumn(int index)
@@ -241,7 +273,7 @@ namespace RandomNameGenerator
             dataGridNames.AutoResizeRowHeadersWidth(
                 DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
         }
-        
+
         private void checkRandomFirstLetters_CheckedChanged(object sender, EventArgs e)
         {
             TogglePrefixFields(!checkRandomFirstLetters.Checked);
@@ -349,6 +381,11 @@ namespace RandomNameGenerator
         {
             if (!buttonSort.Enabled) return;
 
+            SortGeneratedNames();
+        }
+
+        private void SortGeneratedNames()
+        {
             int generatedCount = generatedList.Count;
             int sortedCount = sortedList.Count;
 
@@ -428,6 +465,30 @@ namespace RandomNameGenerator
             {
                 e.Cancel = true;
             }
+        }
+
+        private void nameQuantityMaxButton_Click(object sender, EventArgs e)
+        {
+            nameQuantityNumberInput.Value = MAX_NAMES;
+        }
+
+        private void alwaysSortCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            LockSortButton();
+            TrySort();
+        }
+
+        private void LockSortButton()
+        {
+            buttonSort.Enabled = generatedList.Count > 0 && !alwaysSortCheckBox.Checked;
+        }
+
+        private void TrySort()
+        {
+            if (!alwaysSortCheckBox.Checked) return;
+            
+            isSorted = false;
+            SortGeneratedNames();
         }
     }
 }

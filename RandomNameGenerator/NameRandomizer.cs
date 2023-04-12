@@ -50,7 +50,7 @@ public static class NameRandomizer
             //var prefixesList = FilterList(prefixFilterString, 0); //THIS IS FOR PRE/SUF
             wordFragment = PickRandomWord(prefixList);
             resultsList.Add(wordFragment);
-            if (wordFragment == "NULL")
+            if (wordFragment == "ERR_NULL")
             {
                 return resultsList;
             }
@@ -77,7 +77,7 @@ public static class NameRandomizer
                 wordFragment = PickRandomWord(_wordList); //THIS IS NORMAL
                 //wordFragment = PickRandomWord(_suffixList); //THIS IS FOR PRE/SUF
                 resultsList.Add(wordFragment);
-                if (wordFragment == "NULL")
+                if (wordFragment == "ERR_NULL")
                 {
                     return resultsList;
                 }
@@ -92,7 +92,7 @@ public static class NameRandomizer
 
         wordFragment = PickRandomWord(suffixList);
         //resultsList.Add(wordFragment);
-        if (wordFragment == "NULL")
+        if (wordFragment == "ERR_NULL")
         {
             return resultsList;
         }
@@ -110,7 +110,7 @@ public static class NameRandomizer
         try
         {
             bool hasWords = wordsList is { Count: > 0 };
-            return hasWords ? wordsList[ RandomValue(0, wordsList.Count - 1)] : "NULL";
+            return hasWords ? wordsList[ RandomValue(0, wordsList.Count - 1)] : "ERR_NULL";
         }
         catch (System.Runtime.InteropServices.ExternalException)
         {
