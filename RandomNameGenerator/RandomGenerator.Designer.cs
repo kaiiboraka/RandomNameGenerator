@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.dataGridNames = new System.Windows.Forms.DataGridView();
-            this.numberInput = new System.Windows.Forms.NumericUpDown();
+            this.nameQuantityNumberInput = new System.Windows.Forms.NumericUpDown();
             this.buttonCopy = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
@@ -74,7 +74,7 @@
             this.toolTipQuantity = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipRandomize = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNames)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numberInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameQuantityNumberInput)).BeginInit();
             this.tableLayoutPanelMain.SuspendLayout();
             this.tableLayoutPanelLeft.SuspendLayout();
             this.tableLayoutPanelLeftTop.SuspendLayout();
@@ -86,6 +86,7 @@
             this.tableLayoutPanelButtons.SuspendLayout();
             this.panelRightMain.SuspendLayout();
             this.SuspendLayout();
+
             // 
             // dataGridNames
             // 
@@ -100,7 +101,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridNames.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridNames.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dataGridNames.BackgroundColor = System.Drawing.SystemColors.Info;
+            this.dataGridNames.BackgroundColor = System.Drawing.Color.Lavender;
             this.dataGridNames.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridNames.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dataGridNames.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -127,53 +128,45 @@
             this.dataGridNames.Size = new System.Drawing.Size(228, 490);
             this.dataGridNames.TabIndex = 9;
             this.dataGridNames.TabStop = false;
+
             // 
             // numberInput
             // 
-            this.numberInput.Location = new System.Drawing.Point(145, 60);
-            this.numberInput.Margin = new System.Windows.Forms.Padding(0);
-            this.numberInput.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numberInput.Name = "numberInput";
-            this.numberInput.Size = new System.Drawing.Size(100, 20);
-            this.numberInput.TabIndex = 5;
-            this.toolTipQuantity.SetToolTip(this.numberInput, "Hotkey: Up Arrow, Down Arrow, Scroll Wheel\r\n\r\nNumber of Names:\r\n\r\nUse this contro" +
-        "l to change the number of random names\r\ngenerated to anywhere between 1 and 100 " +
-        "names at a time.\r\n\r\n");
-            this.numberInput.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.nameQuantityNumberInput.Location = new System.Drawing.Point(145, 60);
+            this.nameQuantityNumberInput.Margin = new System.Windows.Forms.Padding(0);
+            this.nameQuantityNumberInput.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            this.nameQuantityNumberInput.Name = "nameQuantityNumberInput";
+            this.nameQuantityNumberInput.Size = new System.Drawing.Size(100, 20);
+            this.nameQuantityNumberInput.TabIndex = 5;
+            this.toolTipQuantity.SetToolTip(this.nameQuantityNumberInput, "Hotkey: Up Arrow, Down Arrow, Scroll Wheel\r\n\r\nNumber of Names:\r\n\r\nUse this contro" + "l to change the number of random names\r\ngenerated to anywhere between 1 and 100 " + "names at a time.\r\n\r\n");
+            this.nameQuantityNumberInput.Value = new decimal(new int[] { 1, 0, 0, 0 });
+
             // 
             // buttonCopy
             // 
             this.buttonCopy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonCopy.Location = new System.Drawing.Point(3, 34);
             this.buttonCopy.Name = "buttonCopy";
-            this.buttonCopy.Size = new System.Drawing.Size(153, 25);
+            this.buttonCopy.Size = new System.Drawing.Size(156, 25);
             this.buttonCopy.TabIndex = 11;
             this.buttonCopy.Text = "&Copy Results";
             this.toolTipButton.SetToolTip(this.buttonCopy, resources.GetString("buttonCopy.ToolTip"));
             this.buttonCopy.UseVisualStyleBackColor = true;
             this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
+
             // 
             // buttonSave
             // 
             this.buttonSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonSave.Location = new System.Drawing.Point(3, 65);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(153, 25);
+            this.buttonSave.Size = new System.Drawing.Size(156, 25);
             this.buttonSave.TabIndex = 12;
             this.buttonSave.Text = "&Save Results";
-            this.toolTipButton.SetToolTip(this.buttonSave, "Save Results:\r\n\r\nClick this button to export the entire table of generated names\r" +
-        "\nto a brand new text (.txt) file, and Save As to a location somewhere\r\non your c" +
-        "omputer.");
+            this.toolTipButton.SetToolTip(this.buttonSave, "Save Results:\r\n\r\nClick this button to export the entire table of generated names\r" + "\nto a brand new text (.txt) file, and Save As to a location somewhere\r\non your c" + "omputer.");
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+
             // 
             // tableLayoutPanelMain
             // 
@@ -191,6 +184,7 @@
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelMain.Size = new System.Drawing.Size(684, 496);
             this.tableLayoutPanelMain.TabIndex = 24;
+
             // 
             // tableLayoutPanelLeft
             // 
@@ -209,6 +203,7 @@
             this.tableLayoutPanelLeft.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanelLeft.Size = new System.Drawing.Size(450, 496);
             this.tableLayoutPanelLeft.TabIndex = 25;
+
             // 
             // buttonRandom
             // 
@@ -221,10 +216,11 @@
             this.buttonRandom.TabIndex = 6;
             this.buttonRandom.TabStop = false;
             this.buttonRandom.Text = "Randomize!";
-            this.toolTipButton.SetToolTip(this.buttonRandom, resources.GetString("buttonRandom.ToolTip"));
-            this.toolTipRandomize.SetToolTip(this.buttonRandom, resources.GetString("buttonRandom.ToolTip1"));
+            this.toolTipRandomize.SetToolTip(this.buttonRandom, resources.GetString("buttonRandom.ToolTip"));
+            this.toolTipButton.SetToolTip(this.buttonRandom, resources.GetString("buttonRandom.ToolTip1"));
             this.buttonRandom.UseVisualStyleBackColor = true;
             this.buttonRandom.Click += new System.EventHandler(this.btnRandom_Click);
+
             // 
             // tableLayoutPanelLeftTop
             // 
@@ -232,7 +228,7 @@
             this.tableLayoutPanelLeftTop.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableLayoutPanelLeftTop.ColumnCount = 2;
             this.tableLayoutPanelLeftTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelLeftTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
+            this.tableLayoutPanelLeftTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
             this.tableLayoutPanelLeftTop.Controls.Add(this.checkRandomLastLetters, 1, 1);
             this.tableLayoutPanelLeftTop.Controls.Add(this.panelLastLetters, 0, 1);
             this.tableLayoutPanelLeftTop.Controls.Add(this.panelFirstLetters, 0, 0);
@@ -252,24 +248,28 @@
             this.tableLayoutPanelLeftTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelLeftTop.Size = new System.Drawing.Size(444, 387);
             this.tableLayoutPanelLeftTop.TabIndex = 10;
+
             // 
             // checkRandomLastLetters
             // 
             this.checkRandomLastLetters.AutoSize = true;
+            this.checkRandomLastLetters.BackColor = System.Drawing.Color.Transparent;
             this.checkRandomLastLetters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkRandomLastLetters.Location = new System.Drawing.Point(285, 102);
+            this.checkRandomLastLetters.Location = new System.Drawing.Point(282, 102);
             this.checkRandomLastLetters.Name = "checkRandomLastLetters";
             this.checkRandomLastLetters.Padding = new System.Windows.Forms.Padding(9, 0, 4, 0);
-            this.checkRandomLastLetters.Size = new System.Drawing.Size(153, 87);
+            this.checkRandomLastLetters.Size = new System.Drawing.Size(156, 87);
             this.checkRandomLastLetters.TabIndex = 8;
             this.checkRandomLastLetters.Text = "Random Last Letter(s)";
             this.checkRandomLastLetters.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTipLastLetters.SetToolTip(this.checkRandomLastLetters, resources.GetString("checkRandomLastLetters.ToolTip"));
-            this.checkRandomLastLetters.UseVisualStyleBackColor = true;
+            this.checkRandomLastLetters.UseVisualStyleBackColor = false;
             this.checkRandomLastLetters.CheckedChanged += new System.EventHandler(this.checkRandomLastLetters_CheckedChanged);
+
             // 
             // panelLastLetters
             // 
+            this.panelLastLetters.BackColor = System.Drawing.Color.Transparent;
             this.panelLastLetters.Controls.Add(this.textSuffixFilter);
             this.panelLastLetters.Controls.Add(this.labelSuffixFilterInput);
             this.panelLastLetters.Controls.Add(this.labelSuffixDescription);
@@ -279,9 +279,10 @@
             this.panelLastLetters.Location = new System.Drawing.Point(3, 99);
             this.panelLastLetters.Margin = new System.Windows.Forms.Padding(0);
             this.panelLastLetters.Name = "panelLastLetters";
-            this.panelLastLetters.Size = new System.Drawing.Size(276, 93);
+            this.panelLastLetters.Size = new System.Drawing.Size(273, 93);
             this.panelLastLetters.TabIndex = 2;
             this.toolTipLastLetters.SetToolTip(this.panelLastLetters, resources.GetString("panelLastLetters.ToolTip"));
+
             // 
             // textSuffixFilter
             // 
@@ -291,24 +292,26 @@
             this.textSuffixFilter.Size = new System.Drawing.Size(100, 20);
             this.textSuffixFilter.TabIndex = 3;
             this.toolTipLastLetters.SetToolTip(this.textSuffixFilter, resources.GetString("textSuffixFilter.ToolTip"));
+
             // 
             // labelSuffixFilterInput
             // 
             this.labelSuffixFilterInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelSuffixFilterInput.AutoSize = true;
-            this.labelSuffixFilterInput.Location = new System.Drawing.Point(12, 61);
+            this.labelSuffixFilterInput.Location = new System.Drawing.Point(9, 61);
             this.labelSuffixFilterInput.Margin = new System.Windows.Forms.Padding(0);
             this.labelSuffixFilterInput.Name = "labelSuffixFilterInput";
             this.labelSuffixFilterInput.Size = new System.Drawing.Size(124, 13);
             this.labelSuffixFilterInput.TabIndex = 7;
             this.labelSuffixFilterInput.Text = "Last Letter(s) Generated:";
             this.toolTipLastLetters.SetToolTip(this.labelSuffixFilterInput, resources.GetString("labelSuffixFilterInput.ToolTip"));
+
             // 
             // labelSuffixDescription
             // 
             this.labelSuffixDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSuffixDescription.AutoSize = true;
-            this.labelSuffixDescription.Location = new System.Drawing.Point(7, 12);
+            this.labelSuffixDescription.Location = new System.Drawing.Point(5, 12);
             this.labelSuffixDescription.Margin = new System.Windows.Forms.Padding(0);
             this.labelSuffixDescription.Name = "labelSuffixDescription";
             this.labelSuffixDescription.Size = new System.Drawing.Size(250, 13);
@@ -316,20 +319,20 @@
             this.labelSuffixDescription.Text = "What letter(s) do you want the name(s) to end with?\r\n";
             this.labelSuffixDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTipLastLetters.SetToolTip(this.labelSuffixDescription, resources.GetString("labelSuffixDescription.ToolTip"));
+
             // 
             // labelSuffixInput
             // 
             this.labelSuffixInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelSuffixInput.AutoSize = true;
-            this.labelSuffixInput.Location = new System.Drawing.Point(42, 35);
+            this.labelSuffixInput.Location = new System.Drawing.Point(39, 35);
             this.labelSuffixInput.Margin = new System.Windows.Forms.Padding(0);
             this.labelSuffixInput.Name = "labelSuffixInput";
             this.labelSuffixInput.Size = new System.Drawing.Size(93, 13);
             this.labelSuffixInput.TabIndex = 2;
             this.labelSuffixInput.Text = "Static name suffix:";
-            this.toolTipLastLetters.SetToolTip(this.labelSuffixInput, "\r\nStatic Name Suffix:\r\n\r\nUse this form to add exact letters to the end of the wor" +
-        "ds you generate.\r\nThese letters will not change or disappear unless you delete t" +
-        "hem from the box.");
+            this.toolTipLastLetters.SetToolTip(this.labelSuffixInput, "\r\nStatic Name Suffix:\r\n\r\nUse this form to add exact letters to the end of the wor" + "ds you generate.\r\nThese letters will not change or disappear unless you delete t" + "hem from the box.");
+
             // 
             // textSuffixInput
             // 
@@ -338,12 +341,12 @@
             this.textSuffixInput.Name = "textSuffixInput";
             this.textSuffixInput.Size = new System.Drawing.Size(100, 20);
             this.textSuffixInput.TabIndex = 2;
-            this.toolTipLastLetters.SetToolTip(this.textSuffixInput, "\r\nStatic Name Suffix:\r\n\r\nUse this form to add exact letters to the end of the wor" +
-        "ds you generate.\r\nThese letters will not change or disappear unless you delete t" +
-        "hem from the box.");
+            this.toolTipLastLetters.SetToolTip(this.textSuffixInput, "\r\nStatic Name Suffix:\r\n\r\nUse this form to add exact letters to the end of the wor" + "ds you generate.\r\nThese letters will not change or disappear unless you delete t" + "hem from the box.");
+
             // 
             // panelFirstLetters
             // 
+            this.panelFirstLetters.BackColor = System.Drawing.Color.Transparent;
             this.panelFirstLetters.Controls.Add(this.textPrefixFilter);
             this.panelFirstLetters.Controls.Add(this.labelPrefixFilterInput);
             this.panelFirstLetters.Controls.Add(this.labelPrefixDescription);
@@ -353,9 +356,10 @@
             this.panelFirstLetters.Location = new System.Drawing.Point(3, 3);
             this.panelFirstLetters.Margin = new System.Windows.Forms.Padding(0);
             this.panelFirstLetters.Name = "panelFirstLetters";
-            this.panelFirstLetters.Size = new System.Drawing.Size(276, 93);
+            this.panelFirstLetters.Size = new System.Drawing.Size(273, 93);
             this.panelFirstLetters.TabIndex = 1;
             this.toolTipFirstLetters.SetToolTip(this.panelFirstLetters, resources.GetString("panelFirstLetters.ToolTip"));
+
             // 
             // textPrefixFilter
             // 
@@ -365,24 +369,26 @@
             this.textPrefixFilter.Size = new System.Drawing.Size(100, 20);
             this.textPrefixFilter.TabIndex = 1;
             this.toolTipFirstLetters.SetToolTip(this.textPrefixFilter, resources.GetString("textPrefixFilter.ToolTip"));
+
             // 
             // labelPrefixFilterInput
             // 
             this.labelPrefixFilterInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelPrefixFilterInput.AutoSize = true;
-            this.labelPrefixFilterInput.Location = new System.Drawing.Point(12, 61);
+            this.labelPrefixFilterInput.Location = new System.Drawing.Point(9, 61);
             this.labelPrefixFilterInput.Margin = new System.Windows.Forms.Padding(0);
             this.labelPrefixFilterInput.Name = "labelPrefixFilterInput";
             this.labelPrefixFilterInput.Size = new System.Drawing.Size(123, 13);
             this.labelPrefixFilterInput.TabIndex = 7;
             this.labelPrefixFilterInput.Text = "First Letter(s) Generated:";
             this.toolTipFirstLetters.SetToolTip(this.labelPrefixFilterInput, resources.GetString("labelPrefixFilterInput.ToolTip"));
+
             // 
             // labelPrefixDescription
             // 
             this.labelPrefixDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelPrefixDescription.AutoSize = true;
-            this.labelPrefixDescription.Location = new System.Drawing.Point(7, 12);
+            this.labelPrefixDescription.Location = new System.Drawing.Point(5, 12);
             this.labelPrefixDescription.Margin = new System.Windows.Forms.Padding(0);
             this.labelPrefixDescription.Name = "labelPrefixDescription";
             this.labelPrefixDescription.Size = new System.Drawing.Size(252, 13);
@@ -390,20 +396,20 @@
             this.labelPrefixDescription.Text = "What letter(s) do you want the name(s) to start with?\r\n";
             this.labelPrefixDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTipFirstLetters.SetToolTip(this.labelPrefixDescription, resources.GetString("labelPrefixDescription.ToolTip"));
+
             // 
             // labelPrefixInput
             // 
             this.labelPrefixInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelPrefixInput.AutoSize = true;
-            this.labelPrefixInput.Location = new System.Drawing.Point(41, 35);
+            this.labelPrefixInput.Location = new System.Drawing.Point(38, 35);
             this.labelPrefixInput.Margin = new System.Windows.Forms.Padding(0);
             this.labelPrefixInput.Name = "labelPrefixInput";
             this.labelPrefixInput.Size = new System.Drawing.Size(94, 13);
             this.labelPrefixInput.TabIndex = 2;
             this.labelPrefixInput.Text = "Static name prefix:";
-            this.toolTipFirstLetters.SetToolTip(this.labelPrefixInput, "\r\nStatic Name Prefix:\r\n\r\nUse this form to add exact letters to the start of the w" +
-        "ords you generate.\r\nThese letters will not change or disappear unless you delete" +
-        " them from the box.\r\n");
+            this.toolTipFirstLetters.SetToolTip(this.labelPrefixInput, "\r\nStatic Name Prefix:\r\n\r\nUse this form to add exact letters to the start of the w" + "ords you generate.\r\nThese letters will not change or disappear unless you delete" + " them from the box.\r\n");
+
             // 
             // textPrefixInput
             // 
@@ -412,12 +418,12 @@
             this.textPrefixInput.Name = "textPrefixInput";
             this.textPrefixInput.Size = new System.Drawing.Size(100, 20);
             this.textPrefixInput.TabIndex = 0;
-            this.toolTipFirstLetters.SetToolTip(this.textPrefixInput, "\r\nStatic Name Prefix:\r\n\r\nUse this form to add exact letters to the start of the w" +
-        "ords you generate.\r\nThese letters will not change or disappear unless you delete" +
-        " them from the box.\r\n");
+            this.toolTipFirstLetters.SetToolTip(this.textPrefixInput, "\r\nStatic Name Prefix:\r\n\r\nUse this form to add exact letters to the start of the w" + "ords you generate.\r\nThese letters will not change or disappear unless you delete" + " them from the box.\r\n");
+
             // 
             // panelNameLength
             // 
+            this.panelNameLength.BackColor = System.Drawing.Color.Transparent;
             this.panelNameLength.Controls.Add(this.labelNameLengthDescription);
             this.panelNameLength.Controls.Add(this.labelTrackBarSize);
             this.panelNameLength.Controls.Add(this.labelNameLength);
@@ -426,15 +432,16 @@
             this.panelNameLength.Location = new System.Drawing.Point(3, 195);
             this.panelNameLength.Margin = new System.Windows.Forms.Padding(0);
             this.panelNameLength.Name = "panelNameLength";
-            this.panelNameLength.Size = new System.Drawing.Size(276, 93);
+            this.panelNameLength.Size = new System.Drawing.Size(273, 93);
             this.panelNameLength.TabIndex = 2;
             this.toolTipLength.SetToolTip(this.panelNameLength, resources.GetString("panelNameLength.ToolTip"));
+
             // 
             // labelNameLengthDescription
             // 
             this.labelNameLengthDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelNameLengthDescription.AutoSize = true;
-            this.labelNameLengthDescription.Location = new System.Drawing.Point(35, 12);
+            this.labelNameLengthDescription.Location = new System.Drawing.Point(33, 12);
             this.labelNameLengthDescription.Margin = new System.Windows.Forms.Padding(0);
             this.labelNameLengthDescription.Name = "labelNameLengthDescription";
             this.labelNameLengthDescription.Size = new System.Drawing.Size(204, 13);
@@ -442,6 +449,7 @@
             this.labelNameLengthDescription.Text = "How long do you want the name(s) to be?\r\n";
             this.labelNameLengthDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTipLength.SetToolTip(this.labelNameLengthDescription, resources.GetString("labelNameLengthDescription.ToolTip"));
+
             // 
             // labelTrackBarSize
             // 
@@ -454,18 +462,21 @@
             this.labelTrackBarSize.TabIndex = 15;
             this.labelTrackBarSize.Text = " ";
             this.labelTrackBarSize.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+
             // 
             // labelNameLength
             // 
             this.labelNameLength.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelNameLength.AutoSize = true;
-            this.labelNameLength.Location = new System.Drawing.Point(61, 48);
+            this.labelNameLength.BackColor = System.Drawing.SystemColors.Control;
+            this.labelNameLength.Location = new System.Drawing.Point(58, 48);
             this.labelNameLength.Margin = new System.Windows.Forms.Padding(0);
             this.labelNameLength.Name = "labelNameLength";
             this.labelNameLength.Size = new System.Drawing.Size(74, 13);
             this.labelNameLength.TabIndex = 13;
             this.labelNameLength.Text = "Name Length:";
             this.toolTipLength.SetToolTip(this.labelNameLength, resources.GetString("labelNameLength.ToolTip"));
+
             // 
             // trackBarNameLength
             // 
@@ -483,113 +494,116 @@
             this.toolTipLength.SetToolTip(this.trackBarNameLength, resources.GetString("trackBarNameLength.ToolTip"));
             this.trackBarNameLength.Value = 1;
             this.trackBarNameLength.Scroll += new System.EventHandler(this.trackBarNameLength_Scroll);
+
             // 
             // checkRandomLength
             // 
             this.checkRandomLength.AutoSize = true;
+            this.checkRandomLength.BackColor = System.Drawing.Color.Transparent;
             this.checkRandomLength.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkRandomLength.Location = new System.Drawing.Point(285, 198);
+            this.checkRandomLength.Location = new System.Drawing.Point(282, 198);
             this.checkRandomLength.Name = "checkRandomLength";
             this.checkRandomLength.Padding = new System.Windows.Forms.Padding(9, 0, 4, 0);
-            this.checkRandomLength.Size = new System.Drawing.Size(153, 87);
+            this.checkRandomLength.Size = new System.Drawing.Size(156, 87);
             this.checkRandomLength.TabIndex = 9;
             this.checkRandomLength.Text = "Random Length";
             this.checkRandomLength.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTipLength.SetToolTip(this.checkRandomLength, resources.GetString("checkRandomLength.ToolTip"));
-            this.checkRandomLength.UseVisualStyleBackColor = true;
+            this.checkRandomLength.UseVisualStyleBackColor = false;
             this.checkRandomLength.CheckedChanged += new System.EventHandler(this.checkRandomLength_CheckedChanged);
+
             // 
             // panelNameQuantity
             // 
+            this.panelNameQuantity.BackColor = System.Drawing.Color.Transparent;
             this.panelNameQuantity.Controls.Add(this.labelQuantity);
-            this.panelNameQuantity.Controls.Add(this.numberInput);
+            this.panelNameQuantity.Controls.Add(this.nameQuantityNumberInput);
             this.panelNameQuantity.Controls.Add(this.labelQuantityDescription);
             this.panelNameQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNameQuantity.Location = new System.Drawing.Point(3, 291);
             this.panelNameQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.panelNameQuantity.Name = "panelNameQuantity";
-            this.panelNameQuantity.Size = new System.Drawing.Size(276, 93);
+            this.panelNameQuantity.Size = new System.Drawing.Size(273, 93);
             this.panelNameQuantity.TabIndex = 3;
-            this.toolTipQuantity.SetToolTip(this.panelNameQuantity, "Hotkey: Up Arrow, Down Arrow, Scroll Wheel\r\n\r\nNumber of Names:\r\n\r\nUse this contro" +
-        "l to change the number of random names\r\ngenerated to anywhere between 1 and 100 " +
-        "names at a time.\r\n\r\n");
+            this.toolTipQuantity.SetToolTip(this.panelNameQuantity, "Hotkey: Up Arrow, Down Arrow, Scroll Wheel\r\n\r\nNumber of Names:\r\n\r\nUse this contro" + "l to change the number of random names\r\ngenerated to anywhere between 1 and 100 " + "names at a time.\r\n\r\n");
+
             // 
             // labelQuantity
             // 
             this.labelQuantity.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(40, 59);
+            this.labelQuantity.Location = new System.Drawing.Point(37, 59);
             this.labelQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.labelQuantity.Name = "labelQuantity";
             this.labelQuantity.Size = new System.Drawing.Size(95, 13);
             this.labelQuantity.TabIndex = 4;
             this.labelQuantity.Text = "Number of Names:";
-            this.toolTipQuantity.SetToolTip(this.labelQuantity, "Hotkey: Up Arrow, Down Arrow, Scroll Wheel\r\n\r\nNumber of Names:\r\n\r\nUse this contro" +
-        "l to change the number of random names\r\ngenerated to anywhere between 1 and 100 " +
-        "names at a time.\r\n\r\n");
+            this.toolTipQuantity.SetToolTip(this.labelQuantity, "Hotkey: Up Arrow, Down Arrow, Scroll Wheel\r\n\r\nNumber of Names:\r\n\r\nUse this contro" + "l to change the number of random names\r\ngenerated to anywhere between 1 and 100 " + "names at a time.\r\n\r\n");
+
             // 
             // labelQuantityDescription
             // 
             this.labelQuantityDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelQuantityDescription.AutoSize = true;
-            this.labelQuantityDescription.Location = new System.Drawing.Point(7, 12);
+            this.labelQuantityDescription.Location = new System.Drawing.Point(5, 12);
             this.labelQuantityDescription.Margin = new System.Windows.Forms.Padding(0);
             this.labelQuantityDescription.Name = "labelQuantityDescription";
             this.labelQuantityDescription.Size = new System.Drawing.Size(263, 26);
             this.labelQuantityDescription.TabIndex = 7;
-            this.labelQuantityDescription.Text = "How many names would you like to generate at once?\r\nThe maximum at one time is 10" +
-    "0.";
+            this.labelQuantityDescription.Text = "How many names would you like to generate at once?\r\nThe maximum at one time is 10" + "0.";
             this.labelQuantityDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTipQuantity.SetToolTip(this.labelQuantityDescription, "Hotkey: Up Arrow, Down Arrow, Scroll Wheel\r\n\r\nNumber of Names:\r\n\r\nUse this contro" +
-        "l to change the number of random names\r\ngenerated to anywhere between 1 and 100 " +
-        "names at a time.\r\n\r\n");
+            this.toolTipQuantity.SetToolTip(this.labelQuantityDescription, "Hotkey: Up Arrow, Down Arrow, Scroll Wheel\r\n\r\nNumber of Names:\r\n\r\nUse this contro" + "l to change the number of random names\r\ngenerated to anywhere between 1 and 100 " + "names at a time.\r\n\r\n");
+
             // 
             // checkRandomFirstLetters
             // 
             this.checkRandomFirstLetters.AutoSize = true;
+            this.checkRandomFirstLetters.BackColor = System.Drawing.Color.Transparent;
             this.checkRandomFirstLetters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkRandomFirstLetters.Location = new System.Drawing.Point(285, 6);
+            this.checkRandomFirstLetters.Location = new System.Drawing.Point(282, 6);
             this.checkRandomFirstLetters.Name = "checkRandomFirstLetters";
             this.checkRandomFirstLetters.Padding = new System.Windows.Forms.Padding(9, 0, 4, 0);
-            this.checkRandomFirstLetters.Size = new System.Drawing.Size(153, 87);
+            this.checkRandomFirstLetters.Size = new System.Drawing.Size(156, 87);
             this.checkRandomFirstLetters.TabIndex = 7;
             this.checkRandomFirstLetters.Text = "Random First Letter(s)";
             this.checkRandomFirstLetters.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.toolTipFirstLetters.SetToolTip(this.checkRandomFirstLetters, resources.GetString("checkRandomFirstLetters.ToolTip"));
-            this.checkRandomFirstLetters.UseVisualStyleBackColor = true;
+            this.checkRandomFirstLetters.UseVisualStyleBackColor = false;
             this.checkRandomFirstLetters.CheckedChanged += new System.EventHandler(this.checkRandomFirstLetters_CheckedChanged);
+
             // 
             // tableLayoutPanelButtons
             // 
+            this.tableLayoutPanelButtons.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanelButtons.ColumnCount = 1;
             this.tableLayoutPanelButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelButtons.Controls.Add(this.buttonCopy, 0, 1);
             this.tableLayoutPanelButtons.Controls.Add(this.buttonSave, 0, 2);
             this.tableLayoutPanelButtons.Controls.Add(this.buttonSort, 0, 0);
             this.tableLayoutPanelButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanelButtons.Location = new System.Drawing.Point(282, 291);
+            this.tableLayoutPanelButtons.Location = new System.Drawing.Point(279, 291);
             this.tableLayoutPanelButtons.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanelButtons.Name = "tableLayoutPanelButtons";
             this.tableLayoutPanelButtons.RowCount = 3;
             this.tableLayoutPanelButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanelButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanelButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanelButtons.Size = new System.Drawing.Size(159, 93);
+            this.tableLayoutPanelButtons.Size = new System.Drawing.Size(162, 93);
             this.tableLayoutPanelButtons.TabIndex = 10;
+
             // 
             // buttonSort
             // 
             this.buttonSort.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonSort.Location = new System.Drawing.Point(3, 3);
             this.buttonSort.Name = "buttonSort";
-            this.buttonSort.Size = new System.Drawing.Size(153, 25);
+            this.buttonSort.Size = new System.Drawing.Size(156, 25);
             this.buttonSort.TabIndex = 10;
             this.buttonSort.Text = "S&ort Results";
-            this.toolTipButton.SetToolTip(this.buttonSort, "Sort Results:\r\n\r\nClick this button to alphabetize the generated words in columns." +
-        "\r\n\r\nUnsort Results:\r\n\r\nClick this button to de-alphabetize the list and return i" +
-        "t to its initial\r\nunsorted order.\r\n");
+            this.toolTipButton.SetToolTip(this.buttonSort, "Sort Results:\r\n\r\nClick this button to alphabetize the generated words in columns." + "\r\n\r\nUnsort Results:\r\n\r\nClick this button to de-alphabetize the list and return i" + "t to its initial\r\nunsorted order.\r\n");
             this.buttonSort.UseVisualStyleBackColor = true;
             this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
+
             // 
             // panelRightMain
             // 
@@ -600,6 +614,7 @@
             this.panelRightMain.Name = "panelRightMain";
             this.panelRightMain.Size = new System.Drawing.Size(228, 490);
             this.panelRightMain.TabIndex = 26;
+
             // 
             // progressBarGenerating
             // 
@@ -611,6 +626,7 @@
             this.progressBarGenerating.Step = 1;
             this.progressBarGenerating.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBarGenerating.TabIndex = 25;
+
             // 
             // toolTipFirstLetters
             // 
@@ -621,6 +637,7 @@
             this.toolTipFirstLetters.ReshowDelay = 110;
             this.toolTipFirstLetters.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipFirstLetters.ToolTipTitle = "About Prefix Generation";
+
             // 
             // toolTipLastLetters
             // 
@@ -631,6 +648,7 @@
             this.toolTipLastLetters.ReshowDelay = 110;
             this.toolTipLastLetters.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipLastLetters.ToolTipTitle = "About Suffix Generation";
+
             // 
             // toolTipLength
             // 
@@ -641,6 +659,7 @@
             this.toolTipLength.ReshowDelay = 110;
             this.toolTipLength.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipLength.ToolTipTitle = "About Generated Word Length";
+
             // 
             // toolTipButton
             // 
@@ -649,6 +668,7 @@
             this.toolTipButton.InitialDelay = 550;
             this.toolTipButton.IsBalloon = true;
             this.toolTipButton.ReshowDelay = 110;
+
             // 
             // toolTipQuantity
             // 
@@ -659,6 +679,7 @@
             this.toolTipQuantity.ReshowDelay = 110;
             this.toolTipQuantity.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipQuantity.ToolTipTitle = "About Name Quantity";
+
             // 
             // toolTipRandomize
             // 
@@ -669,12 +690,13 @@
             this.toolTipRandomize.ReshowDelay = 110;
             this.toolTipRandomize.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTipRandomize.ToolTipTitle = "RANDOMIZE!";
+
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(684, 496);
             this.Controls.Add(this.tableLayoutPanelMain);
             this.HelpButton = true;
@@ -688,7 +710,7 @@
             this.Load += new System.EventHandler(this.RandomGenerator_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormWindow_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNames)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numberInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nameQuantityNumberInput)).EndInit();
             this.tableLayoutPanelMain.ResumeLayout(false);
             this.tableLayoutPanelLeft.ResumeLayout(false);
             this.tableLayoutPanelLeftTop.ResumeLayout(false);
@@ -705,12 +727,11 @@
             this.tableLayoutPanelButtons.ResumeLayout(false);
             this.panelRightMain.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion
         private System.Windows.Forms.DataGridView dataGridNames;
-        private System.Windows.Forms.NumericUpDown numberInput;
+        private System.Windows.Forms.NumericUpDown nameQuantityNumberInput;
         private System.Windows.Forms.Button buttonRandom;
         private System.Windows.Forms.Button buttonSort;
         private System.Windows.Forms.Button buttonCopy;

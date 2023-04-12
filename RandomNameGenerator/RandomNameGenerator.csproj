@@ -28,7 +28,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <LangVersion>7.1</LangVersion>
+    <LangVersion>latestmajor</LangVersion>
     <Nullable>disable</Nullable>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -52,7 +52,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Die.ico</ApplicationIcon>
+    <ApplicationIcon>icon\Die.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>RandomNameGenerator.Program</StartupObject>
@@ -83,6 +83,7 @@
     <Compile Include="NameRandomizer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringManipulator.cs" />
     <EmbeddedResource Include="RandomGenerator.resx">
       <DependentUpon>RandomGenerator.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,13 +114,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="black die icon.ico" />
-    <Content Include="border die.ico" />
-    <Content Include="die icon.ico" />
-    <Content Include="Die.ico" />
+    <Content Include="icon\black die icon.ico" />
+    <Content Include="icon\border die.ico" />
+    <Content Include="icon\die icon.ico" />
+    <Content Include="icon\Die.ico" />
+    <Content Include="icon\pixel perfect die.ico" />
+    <Content Include="icon\Random Icon.ico" />
     <Content Include="NameData\wordlist.txt" />
-    <Content Include="pixel perfect die.ico" />
-    <Content Include="Random Icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

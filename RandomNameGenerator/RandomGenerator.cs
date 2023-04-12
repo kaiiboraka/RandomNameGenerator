@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.IO;
 using System.Windows.Forms;
@@ -9,22 +8,24 @@ namespace RandomNameGenerator
 {
     public partial class MainWindow : Form
     {
-        DataGridViewTextBoxColumn column;
-        public string firstLetters;
-        public string lastLetters;
-        public int nameLength;
-        public int nameQuantity;
-        public string buttonTextCopy = "&Copy Results";
-        public string buttonTextSort = "S&ort Results";
-        public string buttonTextUnsort = "&Unsort Results";
-        public string buttonTextRandom = "Randomize!";
-        public string prefix;
-        public string suffix;
-        public static bool isSorted;
+        private DataGridViewTextBoxColumn column;
+        private string firstLetters;
+        private string lastLetters;
+        private int nameLength;
+        private int nameQuantity;
+        private const string BUTTON_TEXT_COPY = "&Copy Results";
+        private const string BUTTON_TEXT_SORT = "S&ort Results";
+        private const string BUTTON_TEXT_UNSORT = "&Unsort Results";
+        private const string BUTTON_TEXT_RANDOM = "Randomize!";
+        private string prefix;
+        private string suffix;
+        private static bool isSorted;
+        const bool OFF = false;
+        const bool ON = true;
 
-        public static List<string> generatedList = new List<string>();
-        public static List<string> sortedList    = new List<string>();
-        public static List<string> holdingList = new List<string>();
+        private static List<string> generatedList = new();
+        private static List<string> sortedList = new();
+        private static List<string> holdingList = new();
 
         public MainWindow()
         {
@@ -42,34 +43,39 @@ namespace RandomNameGenerator
             trackBarNameLength.Value = 3;
             labelTrackBarSize.Text = trackBarNameLength.Value.ToString();
             isSorted = false;
-            buttonSort.Text = buttonTextSort;
-            buttonCopy.Text = buttonTextCopy;
-            buttonSort.Enabled = false;
-            buttonCopy.Enabled = false;
-            buttonSave.Enabled = false;
+            
+            buttonSort.Text = BUTTON_TEXT_SORT;
+            buttonCopy.Text = BUTTON_TEXT_COPY;
+            
+            ToggleFileButtons(OFF);
+            
             dataGridNames.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
 
 
             // Display the ProgressBar control.
             progressBarGenerating.Visible = true;
+
             // Set Minimum to 1 to represent the first file being copied.
             progressBarGenerating.Minimum = 0;
+
             // Set Maximum to the total number of files to copy.
             progressBarGenerating.Maximum = 100;
+
             // Set the initial value of the ProgressBar.
             progressBarGenerating.Value = 0;
+
             // Set the Step property to a value of 1 to represent each file being copied.
             progressBarGenerating.Step = 1;
         }
 
         private void btnRandom_Click(object sender, EventArgs e)
         {
-
-            buttonCopy.Text = buttonTextCopy;
+            buttonCopy.Text = BUTTON_TEXT_COPY;
             if (dataGridNames.Columns.Count > 0)
             {
                 dataGridNames.Columns.Clear();
             }
+
             generatedList.Clear();
             sortedList.Clear();
             holdingList.Clear();
@@ -82,20 +88,18 @@ namespace RandomNameGenerator
 
             buttonRandom.Text = "Generating...";
 
-            buttonSort.Enabled = false;
-            buttonCopy.Enabled = false;
-            buttonSave.Enabled = false;
-            buttonRandom.Enabled = false;
+            
+            ToggleAllFields(OFF);
 
-
-            buttonSort.Text = buttonTextSort;
+            buttonSort.Text = BUTTON_TEXT_SORT;
             firstLetters = textPrefixFilter.Text.ToLower();
             lastLetters = textSuffixFilter.Text.ToLower();
 
             nameLength = trackBarNameLength.Value;
-            nameQuantity = Convert.ToInt32(numberInput.Value);
+            nameQuantity = Convert.ToInt32(nameQuantityNumberInput.Value);
 
             progressBarGenerating.Maximum = nameQuantity;
+
             //progressBarGenerating.Visible = true;
             progressBarGenerating.Value = 1;
             progressBarGenerating.Step = 1;
@@ -107,44 +111,6 @@ namespace RandomNameGenerator
             {
                 CreateRows(nameQuantity);
             }
-            //make new button to copy all printed values, or print them to a txt file
-
-           
-
-            #region Old randomize loop
-            /*
-            if (checkRandomFirstLetters.Checked)
-            {
-                for (int i = 0; i < nameQuantity; i++)
-                {
-                    string resultWord = NameRandomizer.Randomize(null, suffix, null, lastLetters, nameLength);
-                    
-                    PickAndFillCell(i, nameQuantity, resultWord);
-                    //dataGridNames . add word as new entry (row, etc)
-                }
-            }
-            else if (checkRandomLastLetters.Checked)
-            {
-                for (int i = 0; i < nameQuantity; i++)
-                {
-                    string resultWord = NameRandomizer.Randomize(null, suffix, null, lastLetters, nameLength);
-
-                    PickAndFillCell(i, nameQuantity, resultWord);
-                    //dataGridNames . add word as new entry (row, etc)
-                }
-            }
-            else
-            {
-                for (int i = 0; i < nameQuantity; i++)
-                {
-                    string resultWord = NameRandomizer.Randomize(prefix, suffix, firstLetters, lastLetters, nameLength);
-
-                    PickAndFillCell(i, nameQuantity, resultWord);
-                }
-            }
-            */
-            #endregion
-
 
             for (int i = 0; i < nameQuantity; i++)
             {
@@ -156,79 +122,96 @@ namespace RandomNameGenerator
 
                 if (checkRandomLastLetters.Checked)
                 {
-                    suffix = null;
+                    suffix = null;  
                     lastLetters = null;
                 }
-                if (checkRandomLength.Checked)
-                {
-                    nameLength = NameRandomizer.PickRandomWordLength(trackBarNameLength.Minimum, trackBarNameLength.Maximum);
-                }
-                else
-                {
-                    nameLength = trackBarNameLength.Value;
-                }
-                string resultWord = NameRandomizer.Randomize(ref prefix, ref suffix, ref firstLetters, ref lastLetters, nameLength);
+
+                nameLength = checkRandomLength.Checked ? 
+                    NameRandomizer.RandomValue(trackBarNameLength.Minimum, trackBarNameLength.Maximum) 
+                    : trackBarNameLength.Value;
+
+                string resultWord = NameRandomizer.Randomize(ref prefix, ref suffix, ref firstLetters, ref lastLetters,
+                    nameLength);
 
                 generatedList.Add(resultWord);
                 holdingList.Add(resultWord);
                 sortedList.Add(resultWord);
 
-                PickAndFillCell(i, nameQuantity, resultWord);
+                PickAndFillCell(i, resultWord);
 
                 progressBarGenerating.PerformStep();
 
-                if (resultWord == "NULL")
+                if (resultWord.Contains("NULL") || resultWord.Contains("null"))
                 {
-                    MessageBox.Show("No matching word was found. Try a different word.", "Error: word not found.", MessageBoxButtons.OK);
+                    MessageBox.Show("No matching word was found. Try a different word.", "Error: word not found.",
+                        MessageBoxButtons.OK);
                     break;
                 }
-
             }
 
 
-            SortList(generatedList);
+            generatedList.Sort();
             sortedList = generatedList.ToList();
             generatedList = holdingList.ToList();
 
-            if (dataGridNames.Rows.Count > 1)
-            {
-            buttonSort.Enabled   = true;}
-            buttonCopy.Enabled   = true;
-            buttonSave.Enabled   = true;
-            buttonRandom.Enabled = true;
+            ToggleAllFields(ON);
+            checkRandomFirstLetters_CheckedChanged(this,null);
+            checkRandomLastLetters_CheckedChanged(this,null);
+            checkRandomLength_CheckedChanged(this,null);
 
-            buttonRandom.Text = buttonTextRandom;
+            buttonRandom.Text = BUTTON_TEXT_RANDOM;
 
             progressBarGenerating.Value = 0;
+
             //progressBarGenerating.Visible = false;
         }
 
-        public void CreateDataGridViewColumn(int index)
+        private void ToggleAllFields(bool toggle)
+        {
+            TogglePrefixFields(toggle);
+            ToggleSuffixFields(toggle);
+            ToggleNameLengthFields(toggle);
+            ToggleRandomButton(toggle);
+            ToggleFileButtons(toggle);
+            ToggleQuantityFields(toggle);
+        }
+
+        private void ToggleRandomButton(bool toggle)
+        {
+            buttonRandom.Enabled = toggle;
+        }
+
+        private void ToggleFileButtons(bool toggle)
+        {
+            buttonSort.Enabled = toggle && dataGridNames.Rows.Count > 1;
+            buttonCopy.Enabled = toggle;
+            buttonSave.Enabled = toggle;
+        }
+
+        private void CreateDataGridViewColumn(int index)
         {
             column = new DataGridViewTextBoxColumn();
             dataGridNames.Columns.Insert(index, column);
         }
 
-        public void PickAndFillCell(int wordNum, int quantity, string resultWord)
+        private void PickAndFillCell(int wordNum, string resultWord)
         {
             int colHeight = dataGridNames.Rows.Count;
             int colIndex = wordNum / colHeight;
-            int remainder = quantity - wordNum;
             wordNum -= colHeight * colIndex;
             PopulateCellData(wordNum, colIndex, resultWord);
-
-        }
-       
-        public void PopulateCellData(int row, int col, string word)
-        {
-            dataGridNames.Rows[row].Cells[col].Value = CapitalizeOutputWord(word);
         }
 
-        public void CreateRows(int quantity)
+        private void PopulateCellData(int row, int col, string word)
         {
+            dataGridNames.Rows[row].Cells[col].Value = StringManipulator.CapitalizeWord(word);
+        }
+
+        private void CreateRows(int quantity)
+        {
+            const int colHeight = 20;
             int rowNumber = 1;
             int colNumber = 1;
-            int colHeight = 20;
             int numColumns = quantity / colHeight;
             if (quantity % colHeight > 0)
             {
@@ -240,109 +223,71 @@ namespace RandomNameGenerator
                 CreateDataGridViewColumn(i);
             }
 
-            if (quantity <= colHeight)
-            {
-                dataGridNames.Rows.Add(quantity);
-            }
-            else
-            {
-                dataGridNames.Rows.Add(colHeight);
-            }    
-            
+            dataGridNames.Rows.Add(quantity <= colHeight ? quantity : colHeight);
+
             foreach (DataGridViewRow row in dataGridNames.Rows)
             {
                 row.HeaderCell.Value = rowNumber.ToString();
                 rowNumber += 1;
             }
-            foreach (DataGridViewColumn column in dataGridNames.Columns)
+
+            foreach (DataGridViewColumn gridViewColumn in dataGridNames.Columns)
             {
-                column.HeaderCell.Value = colNumber.ToString();
+                gridViewColumn.HeaderCell.Value = colNumber.ToString();
                 dataGridNames.AutoResizeColumnHeadersHeight(colNumber - 1);
                 colNumber += 1;
             }
 
             dataGridNames.AutoResizeRowHeadersWidth(
                 DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders);
-            
         }
-
-        public string CapitalizeOutputWord(string word)
-        {
-            string capitalized = word;
-            if (word == "NULL")
-            {
-                return capitalized;
-            }
-            else
-            {
-                capitalized = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(word.ToLower());
-            }
-            return capitalized;
-        }
-
-        public static List<string> SortList(List<string> generated)
-        {
-            generated.Sort();
-            List<string> sorted = generated;
-            return sorted;
-        }
-
+        
         private void checkRandomFirstLetters_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkRandomFirstLetters.Checked == true)
-            {
-                labelPrefixDescription.Enabled = false;
-                textPrefixInput.Enabled = false;
-                labelPrefixInput.Enabled = false;
-                textPrefixFilter.Enabled = false;
-                labelPrefixFilterInput.Enabled = false;
-            }
-            else
-            {
-                labelPrefixDescription.Enabled = true;
-                textPrefixInput.Enabled = true;
-                labelPrefixInput.Enabled = true;
-                textPrefixFilter.Enabled = true;
-                labelPrefixFilterInput.Enabled = true;
-            }
+            TogglePrefixFields(!checkRandomFirstLetters.Checked);
         }
 
         private void checkRandomLastLetters_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkRandomLastLetters.Checked == true)
-            {
-                labelSuffixDescription.Enabled = false;
-                textSuffixInput.Enabled = false;
-                labelSuffixInput.Enabled = false;
-                textSuffixFilter.Enabled = false;
-                labelSuffixFilterInput.Enabled = false;
-            }
-            else
-            {
-                labelSuffixDescription.Enabled = true;
-                textSuffixInput.Enabled = true;
-                labelSuffixInput.Enabled = true;
-                textSuffixFilter.Enabled = true;
-                labelSuffixFilterInput.Enabled = true;
-            }
+            ToggleSuffixFields(!checkRandomLastLetters.Checked);
         }
 
         private void checkRandomLength_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkRandomLength.Checked == true)
-            {
-                trackBarNameLength.Enabled         = false;
-                labelTrackBarSize.Enabled          = false;
-                labelNameLength.Enabled            = false;
-                labelNameLengthDescription.Enabled = false;
-            }
-            else
-            {
-                trackBarNameLength.Enabled         = true;
-                labelTrackBarSize.Enabled          = true;
-                labelNameLength.Enabled            = true;
-                labelNameLengthDescription.Enabled = true;
-            }
+            ToggleNameLengthFields(!checkRandomLength.Checked);
+        }
+
+        private void ToggleSuffixFields(bool toggle)
+        {
+            labelSuffixDescription.Enabled = toggle;
+            textSuffixInput.Enabled = toggle;
+            labelSuffixInput.Enabled = toggle;
+            textSuffixFilter.Enabled = toggle;
+            labelSuffixFilterInput.Enabled = toggle;
+        }
+
+        private void TogglePrefixFields(bool toggle)
+        {
+            labelPrefixDescription.Enabled = toggle;
+            textPrefixInput.Enabled = toggle;
+            labelPrefixInput.Enabled = toggle;
+            textPrefixFilter.Enabled = toggle;
+            labelPrefixFilterInput.Enabled = toggle;
+        }
+
+        private void ToggleNameLengthFields(bool toggle)
+        {
+            trackBarNameLength.Enabled = toggle;
+            labelTrackBarSize.Enabled = toggle;
+            labelNameLength.Enabled = toggle;
+            labelNameLengthDescription.Enabled = toggle;
+        }
+
+        private void ToggleQuantityFields(bool toggle)
+        {
+            labelQuantity.Enabled = toggle;
+            labelQuantityDescription.Enabled = toggle;
+            nameQuantityNumberInput.Enabled = toggle;
         }
 
         private void trackBarNameLength_Scroll(object sender, EventArgs e)
@@ -364,16 +309,18 @@ namespace RandomNameGenerator
                     this.Close();
                     break;
                 case Keys.Up:
-                    if (numberInput.Value < numberInput.Maximum)
+                    if (nameQuantityNumberInput.Value < nameQuantityNumberInput.Maximum)
                     {
-                        numberInput.Value++;
+                        nameQuantityNumberInput.Value++;
                     }
+
                     break;
                 case Keys.Down:
-                    if (numberInput.Value > numberInput.Minimum)
+                    if (nameQuantityNumberInput.Value > nameQuantityNumberInput.Minimum)
                     {
-                        numberInput.Value--;
+                        nameQuantityNumberInput.Value--;
                     }
+
                     break;
                 case Keys.Right:
                     if (trackBarNameLength.Value < trackBarNameLength.Maximum)
@@ -381,6 +328,7 @@ namespace RandomNameGenerator
                         trackBarNameLength.Value++;
                         labelTrackBarSize.Text = trackBarNameLength.Value.ToString();
                     }
+
                     break;
                 case Keys.Left:
                     if (trackBarNameLength.Value > trackBarNameLength.Minimum)
@@ -388,106 +336,98 @@ namespace RandomNameGenerator
                         trackBarNameLength.Value--;
                         labelTrackBarSize.Text = trackBarNameLength.Value.ToString();
                     }
+
                     break;
                 default:
-                     e.Handled = false;
-                      e.SuppressKeyPress = false;
+                    e.Handled = false;
+                    e.SuppressKeyPress = false;
                     break;
             }
-           
         }
 
         private void buttonSort_Click(object sender, EventArgs e)
         {
-            if (buttonSort.Enabled == true)
+            if (!buttonSort.Enabled) return;
+
+            int generatedCount = generatedList.Count;
+            int sortedCount = sortedList.Count;
+
+            if (!isSorted)
             {
-                //dataGridNames.Sort();
-                
-
-                int generatedCount = generatedList.Count;
-                int sortedCount = sortedList.Count;
-
-                if (!isSorted)
+                for (int i = 0; i < generatedCount; i++)
                 {
-                    for (int i = 0; i < generatedCount; i++)
-                    {
-                        PickAndFillCell(i, sortedCount, sortedList[i]);
-                    }
-                    buttonSort.Text = buttonTextUnsort;
-                    isSorted = true;
+                    PickAndFillCell(i, sortedList[i]);
                 }
-                else if (isSorted)
-                {
-                    for (int i = 0; i < generatedCount; i++)
-                    {
-                        PickAndFillCell(i, generatedCount, generatedList[i]);
-                    }
-                    buttonSort.Text = buttonTextSort;
-                    isSorted = false;
-                }
-                
 
+                buttonSort.Text = BUTTON_TEXT_UNSORT;
+                isSorted = true;
+            }
+            else if (isSorted)
+            {
+                for (int i = 0; i < sortedCount; i++)
+                {
+                    PickAndFillCell(i, generatedList[i]);
+                }
+
+                buttonSort.Text = BUTTON_TEXT_SORT;
+                isSorted = false;
             }
         }
 
         private void buttonCopy_Click(object sender, EventArgs e)
         {
-            if (buttonCopy.Enabled == true)
-            {
-                try
-                {
-                    dataGridNames.ClearSelection();
-                    dataGridNames.MultiSelect = true;
-                    dataGridNames.SelectAll();
-                    // Add the selection to the clipboard.
-                    Clipboard.SetDataObject(dataGridNames.GetClipboardContent());
-                    dataGridNames.ClearSelection();
-                    buttonCopy.Text = "Copied!";
+            if (!buttonCopy.Enabled) return;
 
-                }
-                catch (System.Runtime.InteropServices.ExternalException)
-                {
-                    buttonCopy.Text = "Failed to Copy";
-                }
+            try
+            {
+                dataGridNames.ClearSelection();
+                dataGridNames.MultiSelect = true;
+                dataGridNames.SelectAll();
+
+                // Add the selection to the clipboard.
+                Clipboard.SetDataObject(dataGridNames.GetClipboardContent());
+                dataGridNames.ClearSelection();
+                buttonCopy.Text = "Copied!";
+            }
+            catch (System.Runtime.InteropServices.ExternalException)
+            {
+                buttonCopy.Text = "Failed to Copy";
             }
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            SaveFileDialog savefile = new SaveFileDialog();
-            savefile.FileName = "Random Names.txt";
-            savefile.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = "Random Names.txt";
+            saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
 
-            if (savefile.ShowDialog() == DialogResult.OK)
+            if (saveFileDialog.ShowDialog() != DialogResult.OK) return;
+
+            using TextWriter tw = new StreamWriter(saveFileDialog.FileName, false, System.Text.Encoding.Unicode);
+
+            for (int i = 0; i < dataGridNames.Rows.Count - 1; i++)
             {
-                using (TextWriter tw = new StreamWriter(savefile.FileName, false, System.Text.Encoding.Unicode))
+                for (int j = 0; j < dataGridNames.Columns.Count; j++)
                 {
-                    for (int i = 0; i < dataGridNames.Rows.Count - 1; i++)
-                    {
-                        for (int j = 0; j < dataGridNames.Columns.Count; j++)
-                        {
-                            tw.Write($"{dataGridNames.Rows[i].Cells[j].Value.ToString()}");
+                    tw.Write($"{dataGridNames.Rows[i].Cells[j].Value}");
 
-                            if (j != dataGridNames.Columns.Count - 1)
-                            {
-                                tw.Write(",");
-                            }
-                        }
-                        tw.WriteLine();
+                    if (j != dataGridNames.Columns.Count - 1)
+                    {
+                        tw.Write(",");
                     }
                 }
-            }
 
-            
+                tw.WriteLine();
+            }
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to quit? Don't forget to save your names!", "I'll miss you. :(", MessageBoxButtons.YesNo) == DialogResult.No)
+            if (MessageBox.Show("Are you sure you want to quit? Don't forget to save your names!", "I'll miss you. :(",
+                    MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 e.Cancel = true;
             }
         }
-
     }
 }

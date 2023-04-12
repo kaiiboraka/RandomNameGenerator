@@ -130,6 +130,9 @@ Click this button to add all of the generated words to your
 computer's clipboard. In other words, it's an automatic Ctrl+C!
 You'll then have to paste it somewhere else, such as in an </value>
   </data>
+  <metadata name="toolTipRandomize.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>826, 20</value>
+  </metadata>
   <data name="buttonRandom.ToolTip" xml:space="preserve">
     <value>Hotkey: Spacebar, Enter
 
@@ -146,9 +149,6 @@ of 3 syllable word fragments sampled from the entire unfiltered list,
 and only 1 name generated at a time.
 </value>
   </data>
-  <metadata name="toolTipRandomize.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>826, 20</value>
-  </metadata>
   <data name="buttonRandom.ToolTip1" xml:space="preserve">
     <value>Hotkey: Spacebar, Enter
 
