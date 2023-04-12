@@ -1,0 +1,11 @@
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Release\RandomNameGenerator.exe.config
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Release\RandomNameGenerator.exe
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Release\RandomNameGenerator.pdb
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.csproj.AssemblyReference.cache
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.csproj.SuggestedBindingRedirects.cache
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.MainWindow.resources
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.Properties.Resources.resources
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.csproj.GenerateResource.cache
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.csproj.CoreCompileInputs.cache
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.exe
+N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.pdb
