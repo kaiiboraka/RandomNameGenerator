@@ -9,3 +9,17 @@ N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release
 N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.csproj.CoreCompileInputs.cache
 N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.exe
 N:\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.pdb
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Release\RandomNameGenerator.exe.config
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Release\RandomNameGenerator.exe
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Release\RandomNameGenerator.pdb
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Release\Newtonsoft.Json.dll
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Release\Newtonsoft.Json.xml
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.csproj.AssemblyReference.cache
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.csproj.SuggestedBindingRedirects.cache
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.MainWindow.resources
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.Properties.Resources.resources
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.csproj.GenerateResource.cache
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.csproj.CopyComplete
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.exe
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Release\RandomNameGenerator.pdb

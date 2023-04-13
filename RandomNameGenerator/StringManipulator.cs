@@ -27,9 +27,7 @@ public static class StringManipulator
             case "ERR_NULL":
                 return word;
             default:
-
                 return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(word);
-                ;
         }
     }
 
@@ -37,6 +35,7 @@ public static class StringManipulator
     {
         if (string.IsNullOrEmpty(prefix)) return word;
         if (word.Contains("ERR_NULL", StringComparison.OrdinalIgnoreCase)) return "ERR_NULL";
+
         return prefix + word;
     }
 
@@ -44,22 +43,23 @@ public static class StringManipulator
     {
         if (string.IsNullOrEmpty(suffix)) return word;
         if (word.Contains("ERR_NULL", StringComparison.OrdinalIgnoreCase)) return "ERR_NULL";
+
         return word + suffix;
     }
 }
 
 public static class StringExtensions
 {
-    public static bool Contains(this String str, String substring, 
+    public static bool Contains(this String str, String substring,
                                 StringComparison comp)
-    {                            
+    {
         if (substring == null)
-            throw new ArgumentNullException("substring", 
+            throw new ArgumentNullException("substring",
                 "substring cannot be null.");
-        else if (! Enum.IsDefined(typeof(StringComparison), comp))
+        else if (!Enum.IsDefined(typeof(StringComparison), comp))
             throw new ArgumentException("comp is not a member of StringComparison",
                 "comp");
 
-        return str.IndexOf(substring, comp) >= 0;                      
+        return str.IndexOf(substring, comp) >= 0;
     }
 }

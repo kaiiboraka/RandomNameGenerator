@@ -20,3 +20,6 @@ C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerat
 C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Debug\RandomNameGenerator.exe.config
 C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Debug\RandomNameGenerator.exe
 C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Debug\RandomNameGenerator.pdb
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Brandon\OneDrive\Game Development\RandomNameGenerator\RandomNameGenerator\obj\Debug\RandomNameGenerator.csproj.CopyComplete

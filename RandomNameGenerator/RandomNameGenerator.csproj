@@ -30,6 +30,8 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <LangVersion>latestmajor</LangVersion>
     <Nullable>disable</Nullable>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,12 +54,15 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon\Die.ico</ApplicationIcon>
+    <ApplicationIcon>icon\black die icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>RandomNameGenerator.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -74,18 +79,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FileIO.cs" />
-    <Compile Include="RandomGenerator.cs">
+    <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RandomGenerator.Designer.cs">
-      <DependentUpon>RandomGenerator.cs</DependentUpon>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="NameRandomizer.cs" />
+    <Compile Include="NameGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringManipulator.cs" />
-    <EmbeddedResource Include="RandomGenerator.resx">
-      <DependentUpon>RandomGenerator.cs</DependentUpon>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +102,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\FileIO.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -114,12 +120,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\ElementNames.json" />
+    <Content Include="bin\Release\ElementNames.json" />
     <Content Include="icon\black die icon.ico" />
     <Content Include="icon\border die.ico" />
     <Content Include="icon\die icon.ico" />
     <Content Include="icon\Die.ico" />
     <Content Include="icon\pixel perfect die.ico" />
     <Content Include="icon\Random Icon.ico" />
+    <Content Include="NameData\ElementNames.json" />
     <Content Include="NameData\wordlist.txt" />
   </ItemGroup>
   <ItemGroup>
