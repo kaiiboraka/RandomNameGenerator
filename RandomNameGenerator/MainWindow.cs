@@ -17,6 +17,7 @@ namespace RandomNameGenerator
         private const int MAX_NAMES = 1000;
         const bool OFF = false;
         const bool ON = true;
+        private const int DEFAULT_QUANTITY = 60;
 
         private string firstLetters;
         private string lastLetters;
@@ -54,8 +55,8 @@ namespace RandomNameGenerator
             textSuffixInput.Text = "";
             textSuffixFilter.Text = "";
 
-            main_NumberInputQuantity.Value = 15;
-            elem_NumberInputQuantity.Value = 15;
+            main_NumberInputQuantity.Value = DEFAULT_QUANTITY;
+            elem_NumberInputQuantity.Value = DEFAULT_QUANTITY;
 
             checkRandomLength.Checked = false;
             checkRandomFirstLetters.Checked = false;
@@ -313,7 +314,7 @@ namespace RandomNameGenerator
             int rowNumber = 1;
             int colNumber = 1;
 
-            int numColumns = dataPanel.Size.Width / colWidth;
+            int numColumns = Math.Max(dataPanel.Size.Width / colWidth,1);
             numColumns = numColumns > wordCount ? wordCount : numColumns;
 
             int numRows = wordCount / numColumns;

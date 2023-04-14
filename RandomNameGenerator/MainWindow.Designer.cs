@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle121 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle122 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle123 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle124 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle125 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle126 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle127 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle128 = new System.Windows.Forms.DataGridViewCellStyle();
             this.main_Names = new System.Windows.Forms.DataGridView();
             this.main_NumberInputQuantity = new System.Windows.Forms.NumericUpDown();
             this.main_ButtonCopy = new System.Windows.Forms.Button();
@@ -112,6 +112,8 @@
             this.updateWordlistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.window_StatusStrip = new System.Windows.Forms.StatusStrip();
             this.window_StatusStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.window_PanelMain = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.main_Names)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.main_NumberInputQuantity)).BeginInit();
             this.main_TableLayoutPanel.SuspendLayout();
@@ -139,6 +141,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.elem_Names)).BeginInit();
             this.window_MenuStrip.SuspendLayout();
             this.window_StatusStrip.SuspendLayout();
+            this.window_PanelMain.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // main_Names
@@ -147,15 +151,12 @@
             this.main_Names.AllowUserToDeleteRows = false;
             this.main_Names.AllowUserToResizeColumns = false;
             this.main_Names.AllowUserToResizeRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.main_Names.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.main_Names.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle121.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle121.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle121.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle121.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle121.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.main_Names.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle121;
             this.main_Names.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.main_Names.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.main_Names.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
@@ -164,37 +165,38 @@
             this.main_Names.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.main_Names.ColumnHeadersVisible = false;
             this.main_Names.Cursor = System.Windows.Forms.Cursors.IBeam;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.main_Names.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle122.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle122.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle122.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle122.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle122.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle122.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle122.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.main_Names.DefaultCellStyle = dataGridViewCellStyle122;
+            this.main_Names.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main_Names.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.main_Names.GridColor = System.Drawing.SystemColors.WindowFrame;
             this.main_Names.Location = new System.Drawing.Point(0, 0);
-            this.main_Names.Margin = new System.Windows.Forms.Padding(10);
+            this.main_Names.Margin = new System.Windows.Forms.Padding(0);
             this.main_Names.Name = "main_Names";
             this.main_Names.ReadOnly = true;
             this.main_Names.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.main_Names.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle123.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle123.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle123.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle123.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle123.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle123.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle123.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.main_Names.RowHeadersDefaultCellStyle = dataGridViewCellStyle123;
             this.main_Names.RowHeadersVisible = false;
             this.main_Names.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.main_Names.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle124.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle124.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle124.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle124.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle124.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.main_Names.RowsDefaultCellStyle = dataGridViewCellStyle124;
             this.main_Names.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Black;
             this.main_Names.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.main_Names.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
@@ -204,7 +206,7 @@
             this.main_Names.ShowCellToolTips = false;
             this.main_Names.ShowEditingIcon = false;
             this.main_Names.ShowRowErrors = false;
-            this.main_Names.Size = new System.Drawing.Size(494, 464);
+            this.main_Names.Size = new System.Drawing.Size(456, 449);
             this.main_Names.TabIndex = 9;
             this.main_Names.TabStop = false;
             // 
@@ -215,7 +217,7 @@
             this.main_NumberInputQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.main_NumberInputQuantity.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.main_NumberInputQuantity.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.main_NumberInputQuantity.Location = new System.Drawing.Point(121, 52);
+            this.main_NumberInputQuantity.Location = new System.Drawing.Point(165, 52);
             this.main_NumberInputQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.main_NumberInputQuantity.Minimum = new decimal(new int[] {
             1,
@@ -231,7 +233,7 @@
         "es at a time.\r\n\r\n");
             this.main_NumberInputQuantity.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             this.main_NumberInputQuantity.Value = new decimal(new int[] {
-            15,
+            60,
             0,
             0,
             0});
@@ -242,9 +244,9 @@
             this.main_ButtonCopy.AutoSize = true;
             this.main_ButtonCopy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main_ButtonCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.main_ButtonCopy.Location = new System.Drawing.Point(3, 33);
+            this.main_ButtonCopy.Location = new System.Drawing.Point(3, 34);
             this.main_ButtonCopy.Name = "main_ButtonCopy";
-            this.main_ButtonCopy.Size = new System.Drawing.Size(182, 24);
+            this.main_ButtonCopy.Size = new System.Drawing.Size(168, 25);
             this.main_ButtonCopy.TabIndex = 11;
             this.main_ButtonCopy.Text = "&Copy Results";
             this.toolTipButton.SetToolTip(this.main_ButtonCopy, resources.GetString("main_ButtonCopy.ToolTip"));
@@ -256,9 +258,9 @@
             this.main_ButtonSave.AutoSize = true;
             this.main_ButtonSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main_ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.main_ButtonSave.Location = new System.Drawing.Point(3, 63);
+            this.main_ButtonSave.Location = new System.Drawing.Point(3, 65);
             this.main_ButtonSave.Name = "main_ButtonSave";
-            this.main_ButtonSave.Size = new System.Drawing.Size(182, 26);
+            this.main_ButtonSave.Size = new System.Drawing.Size(168, 25);
             this.main_ButtonSave.TabIndex = 12;
             this.main_ButtonSave.Text = "&Save Results";
             this.toolTipButton.SetToolTip(this.main_ButtonSave, "Save Results:\r\n\r\nClick this button to export the entire table of generated names\r" +
@@ -269,23 +271,24 @@
             // 
             // main_TableLayoutPanel
             // 
+            this.main_TableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.main_TableLayoutPanel.BackColor = System.Drawing.Color.Transparent;
             this.main_TableLayoutPanel.ColumnCount = 2;
-            this.main_TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 450F));
+            this.main_TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 500F));
             this.main_TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.main_TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.main_TableLayoutPanel.Controls.Add(this.main_LeftTablePanel, 0, 0);
             this.main_TableLayoutPanel.Controls.Add(this.main_PanelRight, 1, 0);
             this.main_TableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.main_TableLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.main_TableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.main_TableLayoutPanel.Name = "main_TableLayoutPanel";
             this.main_TableLayoutPanel.RowCount = 1;
             this.main_TableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.main_TableLayoutPanel.Size = new System.Drawing.Size(950, 470);
+            this.main_TableLayoutPanel.Size = new System.Drawing.Size(916, 443);
             this.main_TableLayoutPanel.TabIndex = 24;
             // 
             // main_LeftTablePanel
             // 
+            this.main_LeftTablePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.main_LeftTablePanel.BackColor = System.Drawing.Color.Transparent;
             this.main_LeftTablePanel.ColumnCount = 1;
             this.main_LeftTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -298,11 +301,12 @@
             this.main_LeftTablePanel.RowCount = 2;
             this.main_LeftTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.main_LeftTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.main_LeftTablePanel.Size = new System.Drawing.Size(450, 470);
+            this.main_LeftTablePanel.Size = new System.Drawing.Size(500, 468);
             this.main_LeftTablePanel.TabIndex = 25;
             // 
             // main_ButtonRandom
             // 
+            this.main_ButtonRandom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.main_ButtonRandom.BackColor = System.Drawing.Color.Transparent;
             this.main_ButtonRandom.Cursor = System.Windows.Forms.Cursors.Default;
             this.main_ButtonRandom.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -311,10 +315,10 @@
             this.main_ButtonRandom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.main_ButtonRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.main_ButtonRandom.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.main_ButtonRandom.Location = new System.Drawing.Point(0, 370);
+            this.main_ButtonRandom.Location = new System.Drawing.Point(0, 368);
             this.main_ButtonRandom.Margin = new System.Windows.Forms.Padding(0);
             this.main_ButtonRandom.Name = "main_ButtonRandom";
-            this.main_ButtonRandom.Size = new System.Drawing.Size(450, 100);
+            this.main_ButtonRandom.Size = new System.Drawing.Size(500, 100);
             this.main_ButtonRandom.TabIndex = 6;
             this.main_ButtonRandom.TabStop = false;
             this.main_ButtonRandom.Text = "Randomize!";
@@ -328,7 +332,7 @@
             this.main_LeftTopTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.main_LeftTopTable.ColumnCount = 2;
             this.main_LeftTopTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.main_LeftTopTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
+            this.main_LeftTopTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
             this.main_LeftTopTable.Controls.Add(this.checkRandomLastLetters, 1, 1);
             this.main_LeftTopTable.Controls.Add(this.panelLastLetters, 0, 1);
             this.main_LeftTopTable.Controls.Add(this.panelFirstLetters, 0, 0);
@@ -347,7 +351,7 @@
             this.main_LeftTopTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.main_LeftTopTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.main_LeftTopTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.main_LeftTopTable.Size = new System.Drawing.Size(450, 370);
+            this.main_LeftTopTable.Size = new System.Drawing.Size(500, 368);
             this.main_LeftTopTable.TabIndex = 10;
             // 
             // checkRandomLastLetters
@@ -355,10 +359,10 @@
             this.checkRandomLastLetters.AutoSize = true;
             this.checkRandomLastLetters.BackColor = System.Drawing.Color.Transparent;
             this.checkRandomLastLetters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkRandomLastLetters.Location = new System.Drawing.Point(264, 96);
+            this.checkRandomLastLetters.Location = new System.Drawing.Point(328, 95);
             this.checkRandomLastLetters.Name = "checkRandomLastLetters";
             this.checkRandomLastLetters.Padding = new System.Windows.Forms.Padding(9, 0, 4, 0);
-            this.checkRandomLastLetters.Size = new System.Drawing.Size(182, 85);
+            this.checkRandomLastLetters.Size = new System.Drawing.Size(168, 84);
             this.checkRandomLastLetters.TabIndex = 8;
             this.checkRandomLastLetters.Text = "Random Last Letter(s)";
             this.checkRandomLastLetters.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -375,21 +379,21 @@
             this.panelLastLetters.Controls.Add(this.labelSuffixInput);
             this.panelLastLetters.Controls.Add(this.textSuffixInput);
             this.panelLastLetters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLastLetters.Location = new System.Drawing.Point(1, 93);
+            this.panelLastLetters.Location = new System.Drawing.Point(1, 92);
             this.panelLastLetters.Margin = new System.Windows.Forms.Padding(0);
             this.panelLastLetters.Name = "panelLastLetters";
-            this.panelLastLetters.Size = new System.Drawing.Size(259, 91);
+            this.panelLastLetters.Size = new System.Drawing.Size(323, 90);
             this.panelLastLetters.TabIndex = 2;
             this.toolTipLastLetters.SetToolTip(this.panelLastLetters, resources.GetString("panelLastLetters.ToolTip"));
             // 
             // textSuffixFilter
             // 
-            this.textSuffixFilter.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textSuffixFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textSuffixFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textSuffixFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textSuffixFilter.Font = new System.Drawing.Font("Georgia", 9.75F);
             this.textSuffixFilter.ForeColor = System.Drawing.Color.White;
-            this.textSuffixFilter.Location = new System.Drawing.Point(126, 58);
+            this.textSuffixFilter.Location = new System.Drawing.Point(187, 58);
             this.textSuffixFilter.Margin = new System.Windows.Forms.Padding(0);
             this.textSuffixFilter.Name = "textSuffixFilter";
             this.textSuffixFilter.Size = new System.Drawing.Size(100, 22);
@@ -398,9 +402,9 @@
             // 
             // labelSuffixFilterInput
             // 
-            this.labelSuffixFilterInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelSuffixFilterInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSuffixFilterInput.AutoSize = true;
-            this.labelSuffixFilterInput.Location = new System.Drawing.Point(-5, 60);
+            this.labelSuffixFilterInput.Location = new System.Drawing.Point(53, 60);
             this.labelSuffixFilterInput.Margin = new System.Windows.Forms.Padding(0);
             this.labelSuffixFilterInput.Name = "labelSuffixFilterInput";
             this.labelSuffixFilterInput.Size = new System.Drawing.Size(124, 13);
@@ -410,9 +414,8 @@
             // 
             // labelSuffixDescription
             // 
-            this.labelSuffixDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelSuffixDescription.AutoSize = true;
-            this.labelSuffixDescription.Location = new System.Drawing.Point(-2, 12);
+            this.labelSuffixDescription.Location = new System.Drawing.Point(30, 12);
             this.labelSuffixDescription.Margin = new System.Windows.Forms.Padding(0);
             this.labelSuffixDescription.Name = "labelSuffixDescription";
             this.labelSuffixDescription.Size = new System.Drawing.Size(250, 13);
@@ -423,9 +426,9 @@
             // 
             // labelSuffixInput
             // 
-            this.labelSuffixInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelSuffixInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSuffixInput.AutoSize = true;
-            this.labelSuffixInput.Location = new System.Drawing.Point(25, 34);
+            this.labelSuffixInput.Location = new System.Drawing.Point(85, 34);
             this.labelSuffixInput.Margin = new System.Windows.Forms.Padding(0);
             this.labelSuffixInput.Name = "labelSuffixInput";
             this.labelSuffixInput.Size = new System.Drawing.Size(93, 13);
@@ -437,12 +440,12 @@
             // 
             // textSuffixInput
             // 
-            this.textSuffixInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textSuffixInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textSuffixInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.textSuffixInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textSuffixInput.Font = new System.Drawing.Font("Georgia", 9.75F);
             this.textSuffixInput.ForeColor = System.Drawing.Color.White;
-            this.textSuffixInput.Location = new System.Drawing.Point(126, 30);
+            this.textSuffixInput.Location = new System.Drawing.Point(187, 30);
             this.textSuffixInput.Margin = new System.Windows.Forms.Padding(0);
             this.textSuffixInput.Name = "textSuffixInput";
             this.textSuffixInput.Size = new System.Drawing.Size(100, 22);
@@ -463,7 +466,7 @@
             this.panelFirstLetters.Location = new System.Drawing.Point(1, 1);
             this.panelFirstLetters.Margin = new System.Windows.Forms.Padding(0);
             this.panelFirstLetters.Name = "panelFirstLetters";
-            this.panelFirstLetters.Size = new System.Drawing.Size(259, 91);
+            this.panelFirstLetters.Size = new System.Drawing.Size(323, 90);
             this.panelFirstLetters.TabIndex = 1;
             this.toolTipFirstLetters.SetToolTip(this.panelFirstLetters, resources.GetString("panelFirstLetters.ToolTip"));
             // 
@@ -474,7 +477,7 @@
             this.textPrefixFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textPrefixFilter.Font = new System.Drawing.Font("Georgia", 9.75F);
             this.textPrefixFilter.ForeColor = System.Drawing.Color.White;
-            this.textPrefixFilter.Location = new System.Drawing.Point(126, 58);
+            this.textPrefixFilter.Location = new System.Drawing.Point(187, 58);
             this.textPrefixFilter.Margin = new System.Windows.Forms.Padding(0);
             this.textPrefixFilter.Name = "textPrefixFilter";
             this.textPrefixFilter.Size = new System.Drawing.Size(100, 22);
@@ -485,7 +488,7 @@
             // 
             this.labelPrefixFilterInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelPrefixFilterInput.AutoSize = true;
-            this.labelPrefixFilterInput.Location = new System.Drawing.Point(-5, 60);
+            this.labelPrefixFilterInput.Location = new System.Drawing.Point(56, 60);
             this.labelPrefixFilterInput.Margin = new System.Windows.Forms.Padding(0);
             this.labelPrefixFilterInput.Name = "labelPrefixFilterInput";
             this.labelPrefixFilterInput.Size = new System.Drawing.Size(123, 13);
@@ -495,9 +498,8 @@
             // 
             // labelPrefixDescription
             // 
-            this.labelPrefixDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelPrefixDescription.AutoSize = true;
-            this.labelPrefixDescription.Location = new System.Drawing.Point(-2, 12);
+            this.labelPrefixDescription.Location = new System.Drawing.Point(30, 12);
             this.labelPrefixDescription.Margin = new System.Windows.Forms.Padding(0);
             this.labelPrefixDescription.Name = "labelPrefixDescription";
             this.labelPrefixDescription.Size = new System.Drawing.Size(252, 13);
@@ -510,7 +512,7 @@
             // 
             this.labelPrefixInput.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelPrefixInput.AutoSize = true;
-            this.labelPrefixInput.Location = new System.Drawing.Point(24, 34);
+            this.labelPrefixInput.Location = new System.Drawing.Point(85, 34);
             this.labelPrefixInput.Margin = new System.Windows.Forms.Padding(0);
             this.labelPrefixInput.Name = "labelPrefixInput";
             this.labelPrefixInput.Size = new System.Drawing.Size(94, 13);
@@ -527,7 +529,7 @@
             this.textPrefixInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textPrefixInput.Font = new System.Drawing.Font("Georgia", 9.75F);
             this.textPrefixInput.ForeColor = System.Drawing.Color.White;
-            this.textPrefixInput.Location = new System.Drawing.Point(126, 30);
+            this.textPrefixInput.Location = new System.Drawing.Point(187, 30);
             this.textPrefixInput.Margin = new System.Windows.Forms.Padding(0);
             this.textPrefixInput.Name = "textPrefixInput";
             this.textPrefixInput.Size = new System.Drawing.Size(100, 22);
@@ -544,10 +546,10 @@
             this.panelNameLength.Controls.Add(this.labelNameLength);
             this.panelNameLength.Controls.Add(this.trackBarNameLength);
             this.panelNameLength.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNameLength.Location = new System.Drawing.Point(1, 185);
+            this.panelNameLength.Location = new System.Drawing.Point(1, 183);
             this.panelNameLength.Margin = new System.Windows.Forms.Padding(0);
             this.panelNameLength.Name = "panelNameLength";
-            this.panelNameLength.Size = new System.Drawing.Size(259, 91);
+            this.panelNameLength.Size = new System.Drawing.Size(323, 90);
             this.panelNameLength.TabIndex = 2;
             this.toolTipLength.SetToolTip(this.panelNameLength, resources.GetString("panelNameLength.ToolTip"));
             // 
@@ -555,7 +557,7 @@
             // 
             this.labelNameLengthDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelNameLengthDescription.AutoSize = true;
-            this.labelNameLengthDescription.Location = new System.Drawing.Point(26, 12);
+            this.labelNameLengthDescription.Location = new System.Drawing.Point(60, 12);
             this.labelNameLengthDescription.Margin = new System.Windows.Forms.Padding(0);
             this.labelNameLengthDescription.Name = "labelNameLengthDescription";
             this.labelNameLengthDescription.Size = new System.Drawing.Size(204, 13);
@@ -566,12 +568,12 @@
             // 
             // labelTrackBarSize
             // 
-            this.labelTrackBarSize.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTrackBarSize.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelTrackBarSize.AutoSize = true;
             this.labelTrackBarSize.BackColor = System.Drawing.Color.Transparent;
             this.labelTrackBarSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTrackBarSize.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelTrackBarSize.Location = new System.Drawing.Point(225, 47);
+            this.labelTrackBarSize.Location = new System.Drawing.Point(260, 45);
             this.labelTrackBarSize.Margin = new System.Windows.Forms.Padding(0);
             this.labelTrackBarSize.Name = "labelTrackBarSize";
             this.labelTrackBarSize.Size = new System.Drawing.Size(13, 20);
@@ -584,7 +586,7 @@
             this.labelNameLength.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelNameLength.AutoSize = true;
             this.labelNameLength.BackColor = System.Drawing.Color.Transparent;
-            this.labelNameLength.Location = new System.Drawing.Point(44, 47);
+            this.labelNameLength.Location = new System.Drawing.Point(90, 47);
             this.labelNameLength.Margin = new System.Windows.Forms.Padding(0);
             this.labelNameLength.Name = "labelNameLength";
             this.labelNameLength.Size = new System.Drawing.Size(74, 13);
@@ -598,7 +600,7 @@
             this.trackBarNameLength.AutoSize = false;
             this.trackBarNameLength.BackColor = System.Drawing.Color.Black;
             this.trackBarNameLength.LargeChange = 1;
-            this.trackBarNameLength.Location = new System.Drawing.Point(116, 35);
+            this.trackBarNameLength.Location = new System.Drawing.Point(160, 35);
             this.trackBarNameLength.Margin = new System.Windows.Forms.Padding(0);
             this.trackBarNameLength.Maximum = 5;
             this.trackBarNameLength.Minimum = 1;
@@ -615,10 +617,10 @@
             this.checkRandomLength.BackColor = System.Drawing.Color.Transparent;
             this.checkRandomLength.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkRandomLength.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.checkRandomLength.Location = new System.Drawing.Point(264, 188);
+            this.checkRandomLength.Location = new System.Drawing.Point(328, 186);
             this.checkRandomLength.Name = "checkRandomLength";
             this.checkRandomLength.Padding = new System.Windows.Forms.Padding(9, 0, 4, 0);
-            this.checkRandomLength.Size = new System.Drawing.Size(182, 85);
+            this.checkRandomLength.Size = new System.Drawing.Size(168, 84);
             this.checkRandomLength.TabIndex = 9;
             this.checkRandomLength.Text = "Random Length";
             this.checkRandomLength.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -634,10 +636,10 @@
             this.main_PanelQuantity.Controls.Add(this.main_NumberInputQuantity);
             this.main_PanelQuantity.Controls.Add(this.main_LabelQuantityDescription);
             this.main_PanelQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.main_PanelQuantity.Location = new System.Drawing.Point(1, 277);
+            this.main_PanelQuantity.Location = new System.Drawing.Point(1, 274);
             this.main_PanelQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.main_PanelQuantity.Name = "main_PanelQuantity";
-            this.main_PanelQuantity.Size = new System.Drawing.Size(259, 92);
+            this.main_PanelQuantity.Size = new System.Drawing.Size(323, 93);
             this.main_PanelQuantity.TabIndex = 3;
             this.toolTipQuantity.SetToolTip(this.main_PanelQuantity, "Hotkey: Up Arrow, Down Arrow, Scroll Wheel\r\n\r\nNumber of Names:\r\n\r\nUse this contro" +
         "l to change the number of random names\r\ngenerated to anywhere between 1 and  nam" +
@@ -647,7 +649,7 @@
             // 
             this.main_ButtonQtyMax.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.main_ButtonQtyMax.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.main_ButtonQtyMax.Location = new System.Drawing.Point(203, 55);
+            this.main_ButtonQtyMax.Location = new System.Drawing.Point(250, 55);
             this.main_ButtonQtyMax.Name = "main_ButtonQtyMax";
             this.main_ButtonQtyMax.Size = new System.Drawing.Size(40, 20);
             this.main_ButtonQtyMax.TabIndex = 8;
@@ -659,7 +661,7 @@
             // 
             this.main_LabelQuantity.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.main_LabelQuantity.AutoSize = true;
-            this.main_LabelQuantity.Location = new System.Drawing.Point(23, 59);
+            this.main_LabelQuantity.Location = new System.Drawing.Point(65, 59);
             this.main_LabelQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.main_LabelQuantity.Name = "main_LabelQuantity";
             this.main_LabelQuantity.Size = new System.Drawing.Size(95, 13);
@@ -671,9 +673,8 @@
             // 
             // main_LabelQuantityDescription
             // 
-            this.main_LabelQuantityDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.main_LabelQuantityDescription.AutoSize = true;
-            this.main_LabelQuantityDescription.Location = new System.Drawing.Point(-2, 12);
+            this.main_LabelQuantityDescription.Location = new System.Drawing.Point(30, 12);
             this.main_LabelQuantityDescription.Margin = new System.Windows.Forms.Padding(0);
             this.main_LabelQuantityDescription.Name = "main_LabelQuantityDescription";
             this.main_LabelQuantityDescription.Size = new System.Drawing.Size(263, 26);
@@ -690,10 +691,10 @@
             this.checkRandomFirstLetters.AutoSize = true;
             this.checkRandomFirstLetters.BackColor = System.Drawing.Color.Transparent;
             this.checkRandomFirstLetters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkRandomFirstLetters.Location = new System.Drawing.Point(264, 4);
+            this.checkRandomFirstLetters.Location = new System.Drawing.Point(328, 4);
             this.checkRandomFirstLetters.Name = "checkRandomFirstLetters";
             this.checkRandomFirstLetters.Padding = new System.Windows.Forms.Padding(9, 0, 4, 0);
-            this.checkRandomFirstLetters.Size = new System.Drawing.Size(182, 85);
+            this.checkRandomFirstLetters.Size = new System.Drawing.Size(168, 84);
             this.checkRandomFirstLetters.TabIndex = 7;
             this.checkRandomFirstLetters.Text = "Random First Letter(s)";
             this.checkRandomFirstLetters.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -711,7 +712,7 @@
             this.main_TableButtons.Controls.Add(this.main_ButtonCopy, 0, 1);
             this.main_TableButtons.Controls.Add(this.main_ButtonSave, 0, 2);
             this.main_TableButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.main_TableButtons.Location = new System.Drawing.Point(261, 277);
+            this.main_TableButtons.Location = new System.Drawing.Point(325, 274);
             this.main_TableButtons.Margin = new System.Windows.Forms.Padding(0);
             this.main_TableButtons.Name = "main_TableButtons";
             this.main_TableButtons.RowCount = 3;
@@ -719,7 +720,7 @@
             this.main_TableButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.main_TableButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.main_TableButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.main_TableButtons.Size = new System.Drawing.Size(188, 92);
+            this.main_TableButtons.Size = new System.Drawing.Size(174, 93);
             this.main_TableButtons.TabIndex = 10;
             // 
             // main_TableSort
@@ -734,7 +735,7 @@
             this.main_TableSort.Name = "main_TableSort";
             this.main_TableSort.RowCount = 1;
             this.main_TableSort.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.main_TableSort.Size = new System.Drawing.Size(182, 24);
+            this.main_TableSort.Size = new System.Drawing.Size(168, 25);
             this.main_TableSort.TabIndex = 13;
             // 
             // main_ButtonSort
@@ -746,7 +747,7 @@
             this.main_ButtonSort.Location = new System.Drawing.Point(0, 0);
             this.main_ButtonSort.Margin = new System.Windows.Forms.Padding(0);
             this.main_ButtonSort.Name = "main_ButtonSort";
-            this.main_ButtonSort.Size = new System.Drawing.Size(100, 24);
+            this.main_ButtonSort.Size = new System.Drawing.Size(100, 25);
             this.main_ButtonSort.TabIndex = 10;
             this.main_ButtonSort.Text = "S&ort Results";
             this.toolTipButton.SetToolTip(this.main_ButtonSort, "Sort Results:\r\n\r\nClick this button to alphabetize the generated words in columns." +
@@ -761,7 +762,7 @@
             this.alwaysSortCheckBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.alwaysSortCheckBox.Location = new System.Drawing.Point(103, 3);
             this.alwaysSortCheckBox.Name = "alwaysSortCheckBox";
-            this.alwaysSortCheckBox.Size = new System.Drawing.Size(76, 18);
+            this.alwaysSortCheckBox.Size = new System.Drawing.Size(62, 19);
             this.alwaysSortCheckBox.TabIndex = 11;
             this.alwaysSortCheckBox.Text = "Always";
             this.alwaysSortCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -771,21 +772,23 @@
             // main_PanelRight
             // 
             this.main_PanelRight.AutoSize = true;
+            this.main_PanelRight.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.main_PanelRight.Controls.Add(this.main_ProgressBar);
             this.main_PanelRight.Controls.Add(this.main_Names);
             this.main_PanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.main_PanelRight.Location = new System.Drawing.Point(453, 3);
+            this.main_PanelRight.Location = new System.Drawing.Point(500, 0);
+            this.main_PanelRight.Margin = new System.Windows.Forms.Padding(0);
             this.main_PanelRight.Name = "main_PanelRight";
-            this.main_PanelRight.Size = new System.Drawing.Size(494, 464);
+            this.main_PanelRight.Size = new System.Drawing.Size(456, 449);
             this.main_PanelRight.TabIndex = 26;
             // 
             // main_ProgressBar
             // 
             this.main_ProgressBar.BackColor = System.Drawing.Color.Fuchsia;
             this.main_ProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.main_ProgressBar.Location = new System.Drawing.Point(0, 441);
+            this.main_ProgressBar.Location = new System.Drawing.Point(0, 426);
             this.main_ProgressBar.Name = "main_ProgressBar";
-            this.main_ProgressBar.Size = new System.Drawing.Size(494, 23);
+            this.main_ProgressBar.Size = new System.Drawing.Size(456, 23);
             this.main_ProgressBar.Step = 1;
             this.main_ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.main_ProgressBar.TabIndex = 25;
@@ -807,10 +810,10 @@
             this.elem_ElementPromptPanel.Controls.Add(this.elem_TypeLabel);
             this.elem_ElementPromptPanel.Controls.Add(this.elem_ComboBox);
             this.elem_ElementPromptPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elem_ElementPromptPanel.Location = new System.Drawing.Point(1, 185);
+            this.elem_ElementPromptPanel.Location = new System.Drawing.Point(1, 175);
             this.elem_ElementPromptPanel.Margin = new System.Windows.Forms.Padding(0);
             this.elem_ElementPromptPanel.Name = "elem_ElementPromptPanel";
-            this.elem_ElementPromptPanel.Size = new System.Drawing.Size(259, 184);
+            this.elem_ElementPromptPanel.Size = new System.Drawing.Size(304, 173);
             this.elem_ElementPromptPanel.TabIndex = 1;
             // 
             // elem_PromptLabel
@@ -819,7 +822,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.elem_PromptLabel.AutoSize = true;
-            this.elem_PromptLabel.Location = new System.Drawing.Point(47, 60);
+            this.elem_PromptLabel.Location = new System.Drawing.Point(50, 35);
             this.elem_PromptLabel.Margin = new System.Windows.Forms.Padding(0);
             this.elem_PromptLabel.Name = "elem_PromptLabel";
             this.elem_PromptLabel.Size = new System.Drawing.Size(197, 26);
@@ -831,7 +834,7 @@
             // 
             this.elem_TypeLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.elem_TypeLabel.AutoSize = true;
-            this.elem_TypeLabel.Location = new System.Drawing.Point(41, 95);
+            this.elem_TypeLabel.Location = new System.Drawing.Point(75, 89);
             this.elem_TypeLabel.Margin = new System.Windows.Forms.Padding(0);
             this.elem_TypeLabel.Name = "elem_TypeLabel";
             this.elem_TypeLabel.Size = new System.Drawing.Size(48, 13);
@@ -842,7 +845,7 @@
             // 
             this.elem_ComboBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.elem_ComboBox.FormattingEnabled = true;
-            this.elem_ComboBox.Location = new System.Drawing.Point(93, 92);
+            this.elem_ComboBox.Location = new System.Drawing.Point(125, 85);
             this.elem_ComboBox.Name = "elem_ComboBox";
             this.elem_ComboBox.Size = new System.Drawing.Size(121, 21);
             this.elem_ComboBox.TabIndex = 7;
@@ -874,10 +877,10 @@
             this.elem_CheckGenerateAll.BackColor = System.Drawing.Color.Transparent;
             this.elem_CheckGenerateAll.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elem_CheckGenerateAll.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.elem_CheckGenerateAll.Location = new System.Drawing.Point(264, 4);
+            this.elem_CheckGenerateAll.Location = new System.Drawing.Point(309, 4);
             this.elem_CheckGenerateAll.Name = "elem_CheckGenerateAll";
             this.elem_CheckGenerateAll.Padding = new System.Windows.Forms.Padding(9, 0, 4, 0);
-            this.elem_CheckGenerateAll.Size = new System.Drawing.Size(182, 177);
+            this.elem_CheckGenerateAll.Size = new System.Drawing.Size(187, 167);
             this.elem_CheckGenerateAll.TabIndex = 14;
             this.elem_CheckGenerateAll.Text = "&Generate All";
             this.elem_CheckGenerateAll.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -900,7 +903,7 @@
             this.elem_ButtonCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.elem_ButtonCopy.Location = new System.Drawing.Point(3, 3);
             this.elem_ButtonCopy.Name = "elem_ButtonCopy";
-            this.elem_ButtonCopy.Size = new System.Drawing.Size(182, 86);
+            this.elem_ButtonCopy.Size = new System.Drawing.Size(187, 80);
             this.elem_ButtonCopy.TabIndex = 11;
             this.elem_ButtonCopy.Text = "&Copy Results";
             this.toolTipButton.SetToolTip(this.elem_ButtonCopy, resources.GetString("elem_ButtonCopy.ToolTip"));
@@ -912,9 +915,9 @@
             this.elem_ButtonSave.AutoSize = true;
             this.elem_ButtonSave.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elem_ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.elem_ButtonSave.Location = new System.Drawing.Point(3, 95);
+            this.elem_ButtonSave.Location = new System.Drawing.Point(3, 89);
             this.elem_ButtonSave.Name = "elem_ButtonSave";
-            this.elem_ButtonSave.Size = new System.Drawing.Size(182, 86);
+            this.elem_ButtonSave.Size = new System.Drawing.Size(187, 81);
             this.elem_ButtonSave.TabIndex = 12;
             this.elem_ButtonSave.Text = "&Save Results";
             this.toolTipButton.SetToolTip(this.elem_ButtonSave, "Save Results:\r\n\r\nClick this button to export the entire table of generated names\r" +
@@ -944,7 +947,7 @@
             this.elem_PanelQuantity.Location = new System.Drawing.Point(1, 1);
             this.elem_PanelQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.elem_PanelQuantity.Name = "elem_PanelQuantity";
-            this.elem_PanelQuantity.Size = new System.Drawing.Size(259, 183);
+            this.elem_PanelQuantity.Size = new System.Drawing.Size(304, 173);
             this.elem_PanelQuantity.TabIndex = 11;
             this.toolTipQuantity.SetToolTip(this.elem_PanelQuantity, "Hotkey: Up Arrow, Down Arrow, Scroll Wheel\r\n\r\nNumber of Names:\r\n\r\nUse this contro" +
         "l to change the number of random names\r\ngenerated to anywhere between 1 and  nam" +
@@ -952,9 +955,8 @@
             // 
             // elem_LabelQuantityDescription
             // 
-            this.elem_LabelQuantityDescription.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.elem_LabelQuantityDescription.AutoSize = true;
-            this.elem_LabelQuantityDescription.Location = new System.Drawing.Point(-9, 23);
+            this.elem_LabelQuantityDescription.Location = new System.Drawing.Point(20, 23);
             this.elem_LabelQuantityDescription.Margin = new System.Windows.Forms.Padding(0);
             this.elem_LabelQuantityDescription.Name = "elem_LabelQuantityDescription";
             this.elem_LabelQuantityDescription.Size = new System.Drawing.Size(263, 26);
@@ -970,7 +972,7 @@
             // 
             this.elem_ButtonQtyMax.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.elem_ButtonQtyMax.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.elem_ButtonQtyMax.Location = new System.Drawing.Point(203, 100);
+            this.elem_ButtonQtyMax.Location = new System.Drawing.Point(230, 95);
             this.elem_ButtonQtyMax.Name = "elem_ButtonQtyMax";
             this.elem_ButtonQtyMax.Size = new System.Drawing.Size(40, 20);
             this.elem_ButtonQtyMax.TabIndex = 8;
@@ -982,7 +984,7 @@
             // 
             this.elem_LabelQuantity.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.elem_LabelQuantity.AutoSize = true;
-            this.elem_LabelQuantity.Location = new System.Drawing.Point(23, 104);
+            this.elem_LabelQuantity.Location = new System.Drawing.Point(45, 99);
             this.elem_LabelQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.elem_LabelQuantity.Name = "elem_LabelQuantity";
             this.elem_LabelQuantity.Size = new System.Drawing.Size(95, 13);
@@ -999,7 +1001,7 @@
             this.elem_NumberInputQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.elem_NumberInputQuantity.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.elem_NumberInputQuantity.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.elem_NumberInputQuantity.Location = new System.Drawing.Point(121, 97);
+            this.elem_NumberInputQuantity.Location = new System.Drawing.Point(145, 92);
             this.elem_NumberInputQuantity.Margin = new System.Windows.Forms.Padding(0);
             this.elem_NumberInputQuantity.Minimum = new decimal(new int[] {
             1,
@@ -1015,7 +1017,7 @@
         "es at a time.\r\n\r\n");
             this.elem_NumberInputQuantity.UpDownAlign = System.Windows.Forms.LeftRightAlignment.Left;
             this.elem_NumberInputQuantity.Value = new decimal(new int[] {
-            15,
+            60,
             0,
             0,
             0});
@@ -1041,10 +1043,10 @@
             this.elem_ButtonRandom.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.elem_ButtonRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.elem_ButtonRandom.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.elem_ButtonRandom.Location = new System.Drawing.Point(0, 370);
+            this.elem_ButtonRandom.Location = new System.Drawing.Point(0, 349);
             this.elem_ButtonRandom.Margin = new System.Windows.Forms.Padding(0);
             this.elem_ButtonRandom.Name = "elem_ButtonRandom";
-            this.elem_ButtonRandom.Size = new System.Drawing.Size(450, 100);
+            this.elem_ButtonRandom.Size = new System.Drawing.Size(500, 100);
             this.elem_ButtonRandom.TabIndex = 6;
             this.elem_ButtonRandom.TabStop = false;
             this.elem_ButtonRandom.Text = "Randomize!";
@@ -1053,14 +1055,20 @@
             // 
             // window_TabControl
             // 
+            this.window_TabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.window_TabControl.Controls.Add(this.tab_Main);
             this.window_TabControl.Controls.Add(this.tab_ElementalNames);
-            this.window_TabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.window_TabControl.Location = new System.Drawing.Point(0, 24);
-            this.window_TabControl.Multiline = true;
+            this.window_TabControl.Location = new System.Drawing.Point(0, 20);
+            this.window_TabControl.Margin = new System.Windows.Forms.Padding(0);
             this.window_TabControl.Name = "window_TabControl";
+            this.window_TabControl.Padding = new System.Drawing.Point(10, 3);
+            this.window_TabControl.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.window_TabControl.RightToLeftLayout = true;
             this.window_TabControl.SelectedIndex = 0;
-            this.window_TabControl.Size = new System.Drawing.Size(964, 502);
+            this.window_TabControl.Size = new System.Drawing.Size(924, 469);
+            this.window_TabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.window_TabControl.TabIndex = 25;
             this.window_TabControl.SelectedIndexChanged += new System.EventHandler(this.window_TabControl_SelectedIndexChanged);
             // 
@@ -1069,9 +1077,9 @@
             this.tab_Main.BackColor = System.Drawing.Color.Black;
             this.tab_Main.Controls.Add(this.main_TableLayoutPanel);
             this.tab_Main.Location = new System.Drawing.Point(4, 22);
+            this.tab_Main.Margin = new System.Windows.Forms.Padding(0);
             this.tab_Main.Name = "tab_Main";
-            this.tab_Main.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Main.Size = new System.Drawing.Size(956, 476);
+            this.tab_Main.Size = new System.Drawing.Size(916, 443);
             this.tab_Main.TabIndex = 0;
             this.tab_Main.Text = "Random Names";
             // 
@@ -1080,31 +1088,32 @@
             this.tab_ElementalNames.BackColor = System.Drawing.Color.Black;
             this.tab_ElementalNames.Controls.Add(this.elem_TableLayoutPanel);
             this.tab_ElementalNames.Location = new System.Drawing.Point(4, 22);
+            this.tab_ElementalNames.Margin = new System.Windows.Forms.Padding(0);
             this.tab_ElementalNames.Name = "tab_ElementalNames";
-            this.tab_ElementalNames.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_ElementalNames.Size = new System.Drawing.Size(956, 476);
+            this.tab_ElementalNames.Size = new System.Drawing.Size(956, 449);
             this.tab_ElementalNames.TabIndex = 1;
             this.tab_ElementalNames.Text = "Elemental Names";
             // 
             // elem_TableLayoutPanel
             // 
+            this.elem_TableLayoutPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.elem_TableLayoutPanel.BackColor = System.Drawing.Color.Transparent;
             this.elem_TableLayoutPanel.ColumnCount = 2;
-            this.elem_TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 450F));
+            this.elem_TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 500F));
             this.elem_TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.elem_TableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.elem_TableLayoutPanel.Controls.Add(this.elem_LeftTablePanel, 0, 0);
             this.elem_TableLayoutPanel.Controls.Add(this.elem_PanelRight, 1, 0);
             this.elem_TableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elem_TableLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.elem_TableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.elem_TableLayoutPanel.Name = "elem_TableLayoutPanel";
             this.elem_TableLayoutPanel.RowCount = 1;
             this.elem_TableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.elem_TableLayoutPanel.Size = new System.Drawing.Size(950, 470);
+            this.elem_TableLayoutPanel.Size = new System.Drawing.Size(956, 449);
             this.elem_TableLayoutPanel.TabIndex = 25;
             // 
             // elem_LeftTablePanel
             // 
+            this.elem_LeftTablePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.elem_LeftTablePanel.BackColor = System.Drawing.Color.Transparent;
             this.elem_LeftTablePanel.ColumnCount = 1;
             this.elem_LeftTablePanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1118,7 +1127,7 @@
             this.elem_LeftTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.elem_LeftTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.elem_LeftTablePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.elem_LeftTablePanel.Size = new System.Drawing.Size(450, 470);
+            this.elem_LeftTablePanel.Size = new System.Drawing.Size(500, 449);
             this.elem_LeftTablePanel.TabIndex = 25;
             // 
             // elem_LeftTopTable
@@ -1127,7 +1136,7 @@
             this.elem_LeftTopTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.elem_LeftTopTable.ColumnCount = 2;
             this.elem_LeftTopTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.elem_LeftTopTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
+            this.elem_LeftTopTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
             this.elem_LeftTopTable.Controls.Add(this.elem_CheckGenerateAll, 1, 0);
             this.elem_LeftTopTable.Controls.Add(this.elem_PanelQuantity, 0, 0);
             this.elem_LeftTopTable.Controls.Add(this.elem_ElementPromptPanel, 0, 1);
@@ -1142,7 +1151,7 @@
             this.elem_LeftTopTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.elem_LeftTopTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.elem_LeftTopTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.elem_LeftTopTable.Size = new System.Drawing.Size(450, 370);
+            this.elem_LeftTopTable.Size = new System.Drawing.Size(500, 349);
             this.elem_LeftTopTable.TabIndex = 10;
             // 
             // elem_ButtonTable
@@ -1154,7 +1163,7 @@
             this.elem_ButtonTable.Controls.Add(this.elem_ButtonCopy, 0, 0);
             this.elem_ButtonTable.Controls.Add(this.elem_ButtonSave, 0, 1);
             this.elem_ButtonTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elem_ButtonTable.Location = new System.Drawing.Point(261, 185);
+            this.elem_ButtonTable.Location = new System.Drawing.Point(306, 175);
             this.elem_ButtonTable.Margin = new System.Windows.Forms.Padding(0);
             this.elem_ButtonTable.Name = "elem_ButtonTable";
             this.elem_ButtonTable.RowCount = 2;
@@ -1162,27 +1171,29 @@
             this.elem_ButtonTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.elem_ButtonTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.elem_ButtonTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.elem_ButtonTable.Size = new System.Drawing.Size(188, 184);
+            this.elem_ButtonTable.Size = new System.Drawing.Size(193, 173);
             this.elem_ButtonTable.TabIndex = 10;
             // 
             // elem_PanelRight
             // 
             this.elem_PanelRight.AutoSize = true;
+            this.elem_PanelRight.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.elem_PanelRight.Controls.Add(this.elem_ProgressBar);
             this.elem_PanelRight.Controls.Add(this.elem_Names);
             this.elem_PanelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.elem_PanelRight.Location = new System.Drawing.Point(453, 3);
+            this.elem_PanelRight.Location = new System.Drawing.Point(500, 0);
+            this.elem_PanelRight.Margin = new System.Windows.Forms.Padding(0);
             this.elem_PanelRight.Name = "elem_PanelRight";
-            this.elem_PanelRight.Size = new System.Drawing.Size(494, 464);
+            this.elem_PanelRight.Size = new System.Drawing.Size(456, 449);
             this.elem_PanelRight.TabIndex = 26;
             // 
             // elem_ProgressBar
             // 
             this.elem_ProgressBar.BackColor = System.Drawing.Color.Fuchsia;
             this.elem_ProgressBar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.elem_ProgressBar.Location = new System.Drawing.Point(0, 441);
+            this.elem_ProgressBar.Location = new System.Drawing.Point(0, 426);
             this.elem_ProgressBar.Name = "elem_ProgressBar";
-            this.elem_ProgressBar.Size = new System.Drawing.Size(494, 23);
+            this.elem_ProgressBar.Size = new System.Drawing.Size(456, 23);
             this.elem_ProgressBar.Step = 1;
             this.elem_ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.elem_ProgressBar.TabIndex = 25;
@@ -1193,15 +1204,12 @@
             this.elem_Names.AllowUserToDeleteRows = false;
             this.elem_Names.AllowUserToResizeColumns = false;
             this.elem_Names.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.elem_Names.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.elem_Names.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle125.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle125.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle125.SelectionBackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle125.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle125.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.elem_Names.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle125;
             this.elem_Names.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.elem_Names.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.elem_Names.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
@@ -1210,14 +1218,15 @@
             this.elem_Names.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.elem_Names.ColumnHeadersVisible = false;
             this.elem_Names.Cursor = System.Windows.Forms.Cursors.IBeam;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.elem_Names.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle126.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle126.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle126.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle126.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle126.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle126.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle126.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.elem_Names.DefaultCellStyle = dataGridViewCellStyle126;
+            this.elem_Names.Dock = System.Windows.Forms.DockStyle.Fill;
             this.elem_Names.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.elem_Names.GridColor = System.Drawing.SystemColors.WindowFrame;
             this.elem_Names.Location = new System.Drawing.Point(0, 0);
@@ -1225,22 +1234,22 @@
             this.elem_Names.Name = "elem_Names";
             this.elem_Names.ReadOnly = true;
             this.elem_Names.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.elem_Names.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle127.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle127.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle127.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle127.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle127.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle127.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle127.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.elem_Names.RowHeadersDefaultCellStyle = dataGridViewCellStyle127;
             this.elem_Names.RowHeadersVisible = false;
             this.elem_Names.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.elem_Names.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle128.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle128.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle128.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle128.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle128.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.elem_Names.RowsDefaultCellStyle = dataGridViewCellStyle128;
             this.elem_Names.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.Black;
             this.elem_Names.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.elem_Names.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
@@ -1250,26 +1259,31 @@
             this.elem_Names.ShowCellToolTips = false;
             this.elem_Names.ShowEditingIcon = false;
             this.elem_Names.ShowRowErrors = false;
-            this.elem_Names.Size = new System.Drawing.Size(494, 464);
+            this.elem_Names.Size = new System.Drawing.Size(456, 449);
             this.elem_Names.TabIndex = 9;
             this.elem_Names.TabStop = false;
             // 
             // window_MenuStrip
             // 
+            this.window_MenuStrip.AllowMerge = false;
+            this.window_MenuStrip.BackColor = System.Drawing.Color.Transparent;
+            this.window_MenuStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.window_MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.window_ToolStripItem_Menu});
-            this.window_MenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.window_MenuStrip.Location = new System.Drawing.Point(0, -3);
             this.window_MenuStrip.Name = "window_MenuStrip";
-            this.window_MenuStrip.Size = new System.Drawing.Size(964, 24);
+            this.window_MenuStrip.Size = new System.Drawing.Size(58, 24);
             this.window_MenuStrip.TabIndex = 26;
             this.window_MenuStrip.Text = "menuStrip1";
             // 
             // window_ToolStripItem_Menu
             // 
+            this.window_ToolStripItem_Menu.BackColor = System.Drawing.Color.Transparent;
             this.window_ToolStripItem_Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_Reload,
             this.openWordlistDirectoryToolStripMenuItem,
             this.updateWordlistsToolStripMenuItem});
+            this.window_ToolStripItem_Menu.ForeColor = System.Drawing.Color.White;
             this.window_ToolStripItem_Menu.Name = "window_ToolStripItem_Menu";
             this.window_ToolStripItem_Menu.Size = new System.Drawing.Size(50, 20);
             this.window_ToolStripItem_Menu.Text = "&Menu";
@@ -1300,40 +1314,67 @@
             this.window_StatusStrip.AllowMerge = false;
             this.window_StatusStrip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.window_StatusStrip.AutoSize = false;
+            this.window_StatusStrip.BackColor = System.Drawing.Color.Transparent;
             this.window_StatusStrip.Dock = System.Windows.Forms.DockStyle.None;
             this.window_StatusStrip.GripMargin = new System.Windows.Forms.Padding(0);
             this.window_StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.window_StatusStripLabel});
             this.window_StatusStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.window_StatusStrip.Location = new System.Drawing.Point(840, 1);
+            this.window_StatusStrip.Location = new System.Drawing.Point(780, -3);
             this.window_StatusStrip.Name = "window_StatusStrip";
             this.window_StatusStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.window_StatusStrip.Size = new System.Drawing.Size(964, 16);
+            this.window_StatusStrip.Size = new System.Drawing.Size(138, 16);
             this.window_StatusStrip.SizingGrip = false;
             this.window_StatusStrip.Stretch = false;
             this.window_StatusStrip.TabIndex = 27;
             // 
             // window_StatusStripLabel
             // 
-            this.window_StatusStripLabel.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.window_StatusStripLabel.BackColor = System.Drawing.Color.Black;
+            this.window_StatusStripLabel.ForeColor = System.Drawing.Color.White;
             this.window_StatusStripLabel.Name = "window_StatusStripLabel";
             this.window_StatusStripLabel.Size = new System.Drawing.Size(78, 15);
             this.window_StatusStripLabel.Text = "Result Count:";
+            // 
+            // window_PanelMain
+            // 
+            this.window_PanelMain.Controls.Add(this.window_StatusStrip);
+            this.window_PanelMain.Controls.Add(this.window_MenuStrip);
+            this.window_PanelMain.Dock = System.Windows.Forms.DockStyle.Top;
+            this.window_PanelMain.Location = new System.Drawing.Point(3, 3);
+            this.window_PanelMain.Name = "window_PanelMain";
+            this.window_PanelMain.Size = new System.Drawing.Size(918, 14);
+            this.window_PanelMain.TabIndex = 27;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.window_TabControl, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.window_PanelMain, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(924, 489);
+            this.tableLayoutPanel1.TabIndex = 28;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(964, 526);
-            this.Controls.Add(this.window_StatusStrip);
-            this.Controls.Add(this.window_TabControl);
-            this.Controls.Add(this.window_MenuStrip);
+            this.ClientSize = new System.Drawing.Size(924, 489);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.window_MenuStrip;
-            this.MinimumSize = new System.Drawing.Size(600, 535);
+            this.MinimumSize = new System.Drawing.Size(705, 528);
             this.Name = "MainWindow";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1384,6 +1425,9 @@
             this.window_MenuStrip.PerformLayout();
             this.window_StatusStrip.ResumeLayout(false);
             this.window_StatusStrip.PerformLayout();
+            this.window_PanelMain.ResumeLayout(false);
+            this.window_PanelMain.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1464,6 +1508,8 @@
         private System.Windows.Forms.ToolStripMenuItem updateWordlistsToolStripMenuItem;
         private System.Windows.Forms.StatusStrip window_StatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel window_StatusStripLabel;
+        private System.Windows.Forms.Panel window_PanelMain;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
 

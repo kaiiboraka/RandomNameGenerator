@@ -54,7 +54,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon\black die icon.ico</ApplicationIcon>
+    <ApplicationIcon>icon\black die.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>RandomNameGenerator.Program</StartupObject>
@@ -102,6 +102,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="icon\black die.ico" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\FileIO.datasource" />
     <None Include="Properties\Settings.settings">
